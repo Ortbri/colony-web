@@ -1,9 +1,14 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 function Navbar() {
   return (
-    <nav className='flexBetween max-container padding-container relative z-30 border-8 border-red-500 py-5'>
-      <Link href={'/'}>Logo here</Link>
+    <nav className='flexBetween max-container padding-container relative z-30 py-5'>
+      <Link href='/'>
+        <Image src={'/hilink-logo.svg'} width={74} height={29} alt='logo' />
+      </Link>
+      <ul className='hidden h-full gap-12 lg:flex'></ul>
+      {/* un ordered list */}
     </nav>
   )
 }
