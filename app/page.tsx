@@ -1,14 +1,18 @@
+import Camp from '@/components/Camp'
+import Features from '@/components/Features'
+import GetApp from '@/components/GetApp'
+import Guide from '@/components/Guide'
+import Hero from '@/components/Hero'
 import React from 'react'
 
 export default function Home() {
   return (
-    <section className='py-24'>
-      <div className='container'>
-        <h1 className='text-3xl font-bold'>Next TS Starter</h1>
-        <text className='text-2xl font-bold text-teal-500'>
-          hello there world
-        </text>
-      </div>
-    </section>
+    <>
+      <Hero />
+      <Camp />
+      <Guide />
+      <Features />
+      <GetApp />
+    </>
   )
 }
