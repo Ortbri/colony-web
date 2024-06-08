@@ -1,60 +1,62 @@
-import Image from 'next/image'
 import React from 'react'
+import IconButton from './Button'
+import { FaUserPlus, FaMap } from 'react-icons/fa'
+import Image from 'next/image'
 
 const Guide = () => {
   return (
-    <section className='flexCenter flex-col'>
+    <section className='max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row'>
+      {/* map */}
+      <div className='guide-map' />
+
       {/* title */}
-      <div className='padding-container max-container w-full pb-24'>
-        <Image src='/camp.svg' alt='camp' width={50} height={50} />
-        <p className='regular-18 -mt-1 mb-3 uppercase text-green-50'>
-          We are here for you
+      <div className='relative z-20 flex flex-1 flex-col gap-6 xl:w-1/2'>
+        <text className='absolute left-[-20px] top-[-30px] w-10 scale-x-[-1] transform text-3xl lg:w-[50px]'>
+          🐝
+        </text>
+        <h1 className='bold-52 lg:bold-88'>Community based app to save time</h1>
+        <p className='text-lg leading-relaxed text-slate-500'>
+          Your guide to getting your time back within your community. We want to
+          help you get your hours back from dog walking, yard work, to even
+          small business help all in one app.
         </p>
-        <div className='flex flex-wrap justify-between gap-5 lg:gap-10'>
-          <h2 className='bold-40 lg:bold-64 xl:max-w-[390px]'>
-            Guide You to Easy Path
-          </h2>
-          <p className='regular-16 text-gray-30 xl:max-w-[520px]'>
-            Only with the hilink application you will no longer get lost and get
-            lost again, because we already support offline maps when there is no
-            internet connection in the field. Invite your friends, relatives and
-            friends to have fun in the wilderness through the valley and reach
-            the top of the mountain
-          </p>
+        <div className='mt-4'>
+          <IconButton>Join Waitlist</IconButton>
         </div>
       </div>
-      {/* boat img */}
-      <div className='flexCenter max-container relative w-full'>
-        <Image
-          src='/boat.png'
-          alt='boat'
-          width={1440}
-          height={580}
-          className='w-full object-cover object-center 2xl:rounded-5xl'
-        />
-        {/* floating div */}
-        <div className='absolute flex gap-3 rounded-3xl border bg-white py-8 pl-5 pr-7 shadow-md md:left-[5%] lg:top-20'>
-          <Image
-            src='/meter.svg'
-            alt='meter'
-            width={16}
-            height={158}
-            className='h-full w-auto'
-          />
-          <div className='flexBetween flex-col'>
-            <div className='flex w-full flex-col'>
-              <div className='flexBetween w-full'>
-                <p className='regular-16 text-gray-20'>Destination</p>
-                <p className='bold-16 text-green-50'>48 min</p>
+      {/* floating */}
+      <div className='relative flex flex-1 items-start'>
+        <div className='relative z-20 flex w-[300px] flex-col gap-8 rounded-3xl bg-green-90 px-7 py-8'>
+          <div className='flexBetween flex flex-1'>
+            <div className='flex flex-col'>
+              <div className='flexBetween'>
+                <p className='regular-16 text-gray-20'>Location</p>
               </div>
-              <p className='bold-20 mt-2'>Aguas Calientes</p>
+              <p className='bold-20 text-white'>Crete, NE</p>
             </div>
+            <div className='flex h-12 w-12 items-center justify-center rounded-full bg-white p-4'>
+              <FaMap />
+            </div>
+          </div>
+          <div className='flex flex-col'>
+            <div className='flexBetween'>
+              <p className='regular-16 text-gray-20'>Job</p>
+            </div>
+            <p className='bold-20 text-white'>Yard Work</p>
+          </div>
 
-            <div className='flex w-full flex-col'>
-              <p className='regular-16 text-gray-20'>Start track</p>
-              <h4 className='bold-20 mt-2 whitespace-nowrap'>
-                Wonorejo Pasuruan
-              </h4>
+          <div className='flexBetween'>
+            <div className='flex flex-col'>
+              <p className='regular-16 block text-gray-20'>Duration</p>
+              <p className='bold-20 text-white'>1 hour</p>
+            </div>
+            <div className='flex flex-col'>
+              <p className='regular-16 block text-gray-20'>Time</p>
+              <p className='bold-20 text-white'>2pm</p>
+            </div>
+            <div className='flex flex-col'>
+              <p className='regular-16 block text-gray-20'>Job Pay</p>
+              <p className='bold-20 text-white'>$16.30</p>
             </div>
           </div>
         </div>
