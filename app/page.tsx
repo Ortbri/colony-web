@@ -1,18 +1,12 @@
-import Camp from '@/components/Camp'
-import Features from '@/components/Features'
-import GetApp from '@/components/GetApp'
-import Guide from '@/components/Guide'
-import Hero from '@/components/Hero'
 import React from 'react'
+import AppFeatures from '@/components/AppFeatures'
+import Features from '@/components/Features'
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Camp />
-      <Guide />
+      <AppFeatures />
       <Features />
-      <GetApp />
     </>
   )
 }

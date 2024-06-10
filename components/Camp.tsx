@@ -1,5 +1,11 @@
-import { PEOPLE_URL } from '@/constants'
 import Image from 'next/image'
+// CAMP SECTION
+export const PEOPLE_URL = [
+  '/person-1.png',
+  '/person-2.png',
+  '/person-3.png',
+  '/person-4.png'
+]
 
 interface CampProps {
   backgroundImage: string

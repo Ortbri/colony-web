@@ -20,7 +20,6 @@ const Hero = () => {
           seeing the incorruptible beauty of nature. We can help you on an
           adventure around the world in just one app
         </p>
-
         <div className='my-11 flex flex-wrap gap-5'>
           <div className='flex items-center gap-2'>
             {Array(5)
@@ -43,8 +42,7 @@ const Hero = () => {
             </span>
           </p>
         </div>
-
-        <div className='flex w-full flex-col gap-3 sm:flex-row'>
+        {/* <div className='flex w-full flex-col gap-3 sm:flex-row'>
           <Button type='button' title='Download App' variant='btn_green' />
           <Button
             type='button'
@@ -52,7 +50,7 @@ const Hero = () => {
             icon='/play.svg'
             variant='btn_white_text'
           />
-        </div>
+        </div> */}
       </div>
 
       <div className='relative flex flex-1 items-start'>

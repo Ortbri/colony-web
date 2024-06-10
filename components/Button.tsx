@@ -1,25 +1,34 @@
-import Image from 'next/image'
+import React from 'react'
+import { IconType } from 'react-icons' // Importing the type for icons
 
-type ButtonProps = {
-  type: 'button' | 'submit'
-  title: string
-  icon?: string
-  variant: string
-  full?: boolean
+interface IconButtonProps {
+  Icon?: IconType
+  onClick?: () => void
+  buttonColor?: string
+  textColor?: string
+  children?: React.ReactNode
+  className?: string
 }
 
-const Button = ({ type, title, icon, variant, full }: ButtonProps) => {
+const IconButton: React.FC<IconButtonProps> = ({
+  Icon,
+  onClick,
+  buttonColor = 'bg-black',
+  textColor = 'text-white',
+  children,
+  className = '',
+  ...props
+}) => {
   return (
     <button
-      className={`flexCenter gap-3 rounded-full border ${variant} ${full && 'w-full'}`}
-      type={type}
+      className={`${buttonColor} ${textColor} flex items-center justify-center rounded-5xl px-4 py-2 shadow transition duration-150 hover:bg-opacity-90 ${className}`}
+      onClick={onClick}
+      {...props}
     >
-      {icon && <Image src={icon} alt={title} width={24} height={24} />}
-      <label className='bold-16 cursor-pointer whitespace-nowrap'>
-        {title}
-      </label>
+      {Icon && <Icon className='mr-2' size={20} />}
+      {children}
     </button>
   )
 }
 
-export default Button
+export default IconButton

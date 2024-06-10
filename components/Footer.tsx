@@ -1,7 +1,34 @@
-import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from '@/constants'
+import { SOCIALS } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+
+// FOOTER SECTION
+export const FOOTER_LINKS = [
+  {
+    title: 'Learn More',
+    links: ['Privacy Policy', 'Terms of use', 'Contact Us']
+  }
+]
+
+export const FOOTER_CONTACT_INFO = {
+  title: 'Contact Us',
+  links: [
+    { label: 'Phone', value: '402-418-0991' },
+    { label: 'Email', value: 'brian@colonly.com' }
+  ]
+}
+
+export const SOCIALS = {
+  title: 'Social',
+  links: [
+    '/facebook.svg',
+    '/instagram.svg',
+    '/twitter.svg',
+    '/youtube.svg',
+    '/wordpress.svg'
+  ]
+}
 
 const Footer = () => {
   return (
@@ -58,7 +85,7 @@ const Footer = () => {
 
         <div className='border bg-gray-20' />
         <p className='regular-14 w-full text-center text-gray-30'>
-          2023 Hilink | All rights reserved
+          2023 Colony LLC | All rights reserved
         </p>
       </div>
     </footer>
