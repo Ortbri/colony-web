@@ -1,6 +1,5 @@
-import { FlipWords } from './ui/FlipWords'
-import { FaLocationArrow } from 'react-icons/fa6'
-import MagicButton from './ui/MagicButton'
+import { FlipWords } from './framer/FlipWords'
+import { Button } from './ui/button'
 
 const words = [
   '2 hours a day',
@@ -11,20 +10,16 @@ const words = [
 
 function Cut() {
   return (
-    <div className='flex h-[40rem] items-center justify-center px-4'>
+    <div className='flex h-[40rem] flex-col items-center justify-center px-4'>
       <div className='mx-auto flex flex-col text-8xl font-semibold text-neutral-600 dark:text-neutral-400'>
         We spend
         <div>
           <FlipWords words={words} />
         </div>
         on household tasks
-        <a href='#about'>
-          {/* <MagicButton
-            title='Get time back'
-            icon={<FaLocationArrow />}
-            position='right'
-          /> */}
-        </a>
+      </div>
+      <div className='flex'>
+        <Button>Button</Button>
       </div>
     </div>
   )
