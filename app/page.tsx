@@ -1,12 +1,12 @@
+import Cut from '@/components/Cut'
 import React from 'react'
-import AppFeatures from '@/components/AppFeatures'
-import Features from '@/components/Features'
 
 export default function Home() {
   return (
-    <>
-      <AppFeatures />
-      <Features />
-    </>
+    <main className='relative mx-auto flex flex-col items-center justify-center overflow-hidden px-5 sm:px-10'>
+      <div className='w-full max-w-7xl'>
+        <Cut />
+      </div>
+    </main>
   )
 }

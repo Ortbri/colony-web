@@ -7,57 +7,11 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: '1rem',
-        md: '1.5rem',
-        lg: '2rem'
-      }
-    },
     extend: {
-      colors: {
-        green: {
-          50: '#30AF5B',
-          90: '#292C27'
-        },
-        gray: {
-          10: '#EEEEEE',
-          20: '#A2A2A2',
-          30: '#7B7B7B',
-          50: '#585858',
-          90: '#141414'
-        },
-        orange: {
-          50: '#FF814C'
-        },
-        blue: {
-          70: '#021639'
-        },
-        yellow: {
-          50: '#FEC601'
-        }
-      },
       backgroundImage: {
-        'bg-img-1': "url('/img-1.png')",
-        'bg-img-2': "url('/img-2.png')",
-        'feature-bg': "url('/feature-bg.png')",
-        'custom-feat': "url('/customFeat-bg1.png')",
-        // 'custom-feat': "url('/feature-bg.png'}",
-        guideMap: "url('/mapPattern-bg.png')",
-        pattern: "url('/pattern.png')",
-        'pattern-2': "url('/pattern-bg.png')"
-      },
-      screens: {
-        xs: '400px',
-        '3xl': '1680px',
-        '4xl': '2200px'
-      },
-      maxWidth: {
-        '10xl': '1512px'
-      },
-      borderRadius: {
-        '5xl': '40px'
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       }
     }
   },
