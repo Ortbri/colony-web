@@ -1,4 +1,6 @@
 import Cut from '@/components/Cut'
+import Features from '@/components/Features'
+import Guide from '@/components/Guide'
 import React from 'react'
 
 export default function Home() {
@@ -6,6 +8,8 @@ export default function Home() {
     <main className='relative mx-auto flex flex-col items-center justify-center overflow-hidden px-5 sm:px-10'>
       <div className='w-full max-w-7xl'>
         <Cut />
+        <Guide />
+        <Features />
       </div>
     </main>
   )
