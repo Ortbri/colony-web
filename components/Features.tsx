@@ -1,65 +1,79 @@
-import { FEATURES } from '@/constants'
-import Image from 'next/image'
+'use client'
 import React from 'react'
+import { BentoGrid, BentoGridItem } from './framer/BentoGrid'
+import { Button } from './ui/button'
 
-const Features = () => {
+const Skeleton = () => (
+  <div className='flex h-full min-h-[6rem] w-full flex-1 rounded-xl bg-gradient-to-br from-neutral-200 to-neutral-100 dark:from-neutral-900 dark:to-neutral-800'></div>
+)
+
+// Define two sets of items
+const hirerItems = [
+  {
+    title: 'Efficient Hiring Process',
+    header: <Skeleton />
+    // description and icon can be uncommented or added as needed
+  },
+  {
+    title: 'Cost Effective Solutions',
+    header: <Skeleton />
+  },
+  {
+    title: 'Wide Range of Skills',
+    header: <Skeleton />
+  }
+]
+
+const workerItems = [
+  {
+    title: 'Flexible Working Hours',
+    header: <Skeleton />
+  },
+  {
+    title: 'Diverse Opportunities',
+    header: <Skeleton />
+  },
+  {
+    title: 'Competitive Pay',
+    header: <Skeleton />
+  }
+]
+
+function Features() {
+  // State to toggle between hirer and worker views
+  const [view, setView] = React.useState('hirer')
+
   return (
-    <section className='flexCenter flex-col overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24'>
-      <div className='max-container padding-container relative flex w-full justify-end'>
-        <div className='flex flex-1 lg:min-h-[900px]'>
-          <Image
-            src='/phone.png'
-            alt='phone'
-            width={440}
-            height={1000}
-            className='feature-phone'
-          />
+    <>
+      <div className='flex flex-col items-center px-4 py-20 text-6xl font-semibold text-neutral-600 dark:text-neutral-400 sm:text-6xl lg:text-8xl'>
+        <h1>Features</h1>
+        <div className='flex flex-row gap-5 py-6'>
+          <Button
+            size={'lg'}
+            onClick={() => setView('hirer')}
+            variant={view === 'hirer' ? undefined : 'outline'}
+          >
+            Hirer
+          </Button>
+          <Button
+            size={'lg'}
+            onClick={() => setView('worker')}
+            variant={view === 'worker' ? undefined : 'outline'}
+          >
+            Worker
+          </Button>
         </div>
-
-        <div className='z-20 flex w-full flex-col lg:w-[60%]'>
-          <div className='relative'>
-            <Image
-              src='/camp.svg'
-              alt='camp'
-              width={50}
-              height={50}
-              className='absolute left-[-5px] top-[-28px] w-10 lg:w-[50px]'
-            />
-            <h2 className='bold-40 lg:bold-64'>Our Features</h2>
-          </div>
-          <ul className='lg:mg-20 mt-10 grid gap-10 md:grid-cols-2 lg:gap-20'>
-            {FEATURES.map((feature) => (
-              <FeatureItem
-                key={feature.title}
-                title={feature.title}
-                icon={feature.icon}
-                description={feature.description}
-              />
+      </div>
+      <BentoGrid className='mx-auto max-w-4xl'>
+        {view === 'hirer'
+          ? hirerItems.map((item, i) => (
+              <BentoGridItem key={i} title={item.title} header={item.header} />
+            ))
+          : workerItems.map((item, i) => (
+              <BentoGridItem key={i} title={item.title} header={item.header} />
             ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-type FeatureItem = {
-  title: string
-  icon: string
-  description: string
-}
-
-const FeatureItem = ({ title, icon, description }: FeatureItem) => {
-  return (
-    <li className='flex w-full flex-1 flex-col items-start'>
-      <div className='rounded-full bg-green-50 p-4 lg:p-7'>
-        <Image src={icon} alt='map' width={28} height={28} />
-      </div>
-      <h2 className='bold-20 lg:bold-32 mt-5 capitalize'>{title}</h2>
-      <p className='regular-16 mt-5 bg-white/80 text-gray-30 lg:mt-[30px] lg:bg-none'>
-        {description}
-      </p>
-    </li>
+      </BentoGrid>
+    </>
   )
 }
 
