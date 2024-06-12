@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navbar from '@/components/previous/Navbar'
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider } from './provider'
 
 export const metadata: Metadata = {
   title: 'Join Colony App',
