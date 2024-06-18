@@ -77,7 +77,7 @@ function Features() {
       <div className='flex flex-col'>
         <Link href='/privacy'>GO TO PRIVACY</Link>
         <Link href='/tos'>GO TO TERMS OF SERVICE</Link>
-        <Link href='/suppport'>SUPPORT</Link>
+        <Link href='/support'>SUPPORT</Link>
       </div>
     </>
   )
