@@ -1,6 +1,7 @@
 import Cut from '@/components/Cut'
 import Features from '@/components/Features'
 import Guide from '@/components/Guide'
+import Link from 'next/link'
 import React from 'react'
 
 export default function Home() {

@@ -2,6 +2,7 @@
 import React from 'react'
 import { BentoGrid, BentoGridItem } from './framer/BentoGrid'
 import { Button } from './ui/button'
+import Link from 'next/link'
 
 const Skeleton = () => (
   <div className='flex h-full min-h-[6rem] w-full flex-1 rounded-xl bg-gradient-to-br from-neutral-200 to-neutral-100 dark:from-neutral-900 dark:to-neutral-800'></div>
@@ -73,6 +74,10 @@ function Features() {
               <BentoGridItem key={i} title={item.title} header={item.header} />
             ))}
       </BentoGrid>
+      <div className='flex flex-col'>
+        <Link href='/privacy'>GO TO PRIVACY</Link>
+        <Link href='/tos'>GO TO TERMS OF SERVICE</Link>
+      </div>
     </>
   )
 }
