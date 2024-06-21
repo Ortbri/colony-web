@@ -61,7 +61,7 @@ export const Navbar = ({
           duration: 0.2
         }}
         className={cn(
-          'fixed inset-x-10 top-5 z-[5000] flex items-center justify-between rounded-3xl px-5 py-2 shadow-md',
+          'fixed inset-x-10 top-5 z-[5000] mx-auto flex max-w-7xl items-center justify-between rounded-3xl px-5 py-2 shadow-md',
           className
         )}
         style={{

@@ -1,89 +1,88 @@
 import React from 'react'
 import { FlipWords } from './framer/FlipWords'
-import { BentoGrid, BentoGridItem } from './framer/BentoGrid/BentoGrid'
-import {
-  FaProjectDiagram,
-  FaUmbrellaBeach,
-  FaUserFriends
-} from 'react-icons/fa'
-import { cn } from '@/lib/utils'
+import { HoverEffect } from './framer/CardHover'
+import { Button } from './ui/button'
 
+function Cut() {
+  return (
+    <section className='py-20'>
+      {/* card */}
+      <div className='flex w-full flex-1 flex-col rounded-3xl border border-transparent bg-white p-4 shadow-input transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none'>
+        {/* item 1 */}
+        <div className='flex flex-1 flex-col items-center gap-8 pt-14'>
+          <div className='text-7xl font-semibold'>
+            <FlipWords words={words} />
+          </div>
+          <h3 className='text-xl text-gray-400'>
+            The Average time spent on everday tasks like...
+          </h3>
+        </div>
+        {/* item 2 */}
+        <div className='mx-auto max-w-5xl px-8'>
+          <HoverEffect items={tasks} />
+        </div>
+
+        <div className='flex flex-col items-center justify-center text-4xl font-semibold'>
+          Taking time away from
+          <div className='mx-auto max-w-5xl px-8'>
+            <HoverEffect items={personal} />
+          </div>
+        </div>
+
+        {/* link research */}
+        <Button variant={'link'} className='text-xs text-gray-500'>
+          {/* https://www.bls.gov/news.release/atus.nr0.htm#:~:text=(See%20table%201.),(See%20table%201.) */}
+          American Time Use Survey Summary
+        </Button>
+      </div>
+    </section>
+  )
+}
+
+/* ----------------------------- flipping words ----------------------------- */
 const words = [
   '2 hours a day',
   '14 hours a week',
   '56 hours a month',
   '28 days a year'
 ]
-
-function Cut() {
-  return (
-    <section className='py-20'>
-      <div className='flex w-full flex-1 flex-col rounded-3xl border border-neutral-200 bg-white p-4 shadow-xl shadow-black/[0.1] dark:border-white/[0.1] dark:bg-black dark:shadow-white/[0.05]'>
-        {/* top */}
-        <div className='flex h-60 flex-1 flex-col items-center'>
-          <h3 className='text-xl text-gray-400'>
-            The hidden cost of household tasks
-          </h3>
-          <div className='text-6xl font-semibold'>
-            <FlipWords words={words} />
-          </div>
-        </div>
-        {/* bottom */}
-        <div className='mt-10 p-4'>
-          <BentoGrid className='mx-auto max-w-4xl md:auto-rows-[20rem]'>
-            {items.map((item, i) => (
-              <BentoGridItem
-                key={i}
-                title={item.title}
-                description={item.description}
-                // header={item.header}
-                icon={item.icon}
-              />
-            ))}
-          </BentoGrid>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-const Skeleton = () => (
-  <div className='dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex h-full min-h-[6rem] w-full flex-1 rounded-xl border border-transparent bg-neutral-100 [mask-image:radial-gradient(ellipse_at_center,white,transparent)] dark:border-white/[0.2] dark:bg-black'></div>
-)
-
-const items = [
+/* ---------------------------------- tasks --------------------------------- */
+export const tasks = [
   {
-    icon: <FaUserFriends className='h-6 w-6 text-neutral-500' />,
-    title: 'Family Time',
-    description: (
-      <span className='text-sm'>
-        Missing out on quality time with family and friends.
-      </span>
-    ),
-    // header: <Skeleton />,
-    className: 'sm:col-span-1'
+    title: 'Dog Walking',
+    description:
+      'Walking our dogs everday is a necessity for the well being of our pet.',
+    link: 'https://stripe.com'
   },
   {
-    icon: <FaProjectDiagram className='h-6 w-6 text-neutral-500' />,
+    title: 'Yard Work',
+    description:
+      'A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.',
+    link: 'https://netflix.com'
+  },
+  {
+    title: 'Household tasks',
+    description:
+      'A multinational technology company that specializes in Internet-related services and products.',
+    link: 'https://google.com'
+  }
+]
+/* -------------------------------- personal -------------------------------- */
+export const personal = [
+  {
+    title: 'Family',
+    description: ' Missing out on quality time with family and friends.',
+    link: 'https://stripe.com'
+  },
+  {
     title: 'Personal Projects',
-    description: (
-      <span className='text-sm'>
-        Less time for hobbies and personal projects.
-      </span>
-    ),
-    // header: <Skeleton />,
-    className: 'sm:col-span-1'
+    description: 'Less time for hobbies and personal projects.',
+    link: 'https://netflix.com'
   },
   {
-    icon: <FaUmbrellaBeach className='h-6 w-6 text-neutral-500' />,
-    title: 'Relaxation',
-    description: (
-      <span className='text-sm'>
-        Reduced time for relaxation and self-care.
-      </span>
-    ),
-    // header: <Skeleton />,
-    className: 'sm:col-span-1'
+    title: 'Time for you',
+    description: '  Reduced time for relaxation and self-care.',
+    link: 'https://google.com'
   }
 ]
 
