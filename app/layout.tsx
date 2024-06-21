@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
-import './globals.css'
 import { ThemeProvider } from './provider'
+import { Navbar } from '@/components/Navbar'
+import { navItems } from '@/data'
+import Footer from '@/components/Footer'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Join Colony App',
@@ -21,7 +24,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar navItems={navItems} />
           <main className='relative overflow-hidden'>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
