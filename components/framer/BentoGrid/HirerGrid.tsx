@@ -17,7 +17,7 @@ import { Button } from '@/components/ui/button'
 function HirerGrid() {
   return (
     <>
-      <BentoGrid className='mx-auto max-w-4xl md:auto-rows-[20rem]'>
+      <BentoGrid className='mx-auto max-w-7xl md:auto-rows-[20rem]'>
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
@@ -35,7 +35,7 @@ function HirerGrid() {
 // const Skeleton = () => (
 //   <div className='dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex h-full min-h-[6rem] w-full flex-1 rounded-xl border border-transparent bg-neutral-100 [mask-image:radial-gradient(ellipse_at_center,white,transparent)] dark:border-white/[0.2] dark:bg-black'></div>
 // )
-const SkeletonOne = () => {
+const MessageSkelly = () => {
   const variants = {
     initial: {
       x: 0
@@ -71,27 +71,41 @@ const SkeletonOne = () => {
         variants={variants}
         className='flex flex-row items-center space-x-2 rounded-full border border-neutral-100 bg-white p-2 dark:border-white/[0.2] dark:bg-black'
       >
-        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-pink-500 to-violet-500' />
+        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-amber-500 to-orange-800' />
         <div className='h-4 w-full rounded-full bg-gray-100 dark:bg-neutral-900' />
       </motion.div>
-      <motion.div
+      {/* <motion.div
         variants={variantsSecond}
         className='ml-auto flex w-3/4 flex-row items-center space-x-2 rounded-full border border-neutral-100 bg-white p-2 dark:border-white/[0.2] dark:bg-black'
       >
         <div className='h-4 w-full rounded-full bg-gray-100 dark:bg-neutral-900' />
-        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-pink-500 to-violet-500' />
+        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-amber-500 to-orange-800' />
+      </motion.div> */}
+      <motion.div
+        variants={variantsSecond}
+        className='flex flex-row items-center space-x-2 rounded-full border border-neutral-100 bg-white p-2 dark:border-white/[0.2] dark:bg-black'
+      >
+        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-amber-500 to-orange-800' />
+        <div className='h-4 w-full rounded-full bg-gray-100 dark:bg-neutral-900' />
       </motion.div>
       <motion.div
         variants={variants}
         className='flex flex-row items-center space-x-2 rounded-full border border-neutral-100 bg-white p-2 dark:border-white/[0.2] dark:bg-black'
       >
-        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-pink-500 to-violet-500' />
+        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-amber-500 to-orange-800' />
+        <div className='h-4 w-full rounded-full bg-gray-100 dark:bg-neutral-900' />
+      </motion.div>
+      <motion.div
+        variants={variantsSecond}
+        className='flex flex-row items-center space-x-2 rounded-full border border-neutral-100 bg-white p-2 dark:border-white/[0.2] dark:bg-black'
+      >
+        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-amber-500 to-orange-800' />
         <div className='h-4 w-full rounded-full bg-gray-100 dark:bg-neutral-900' />
       </motion.div>
     </motion.div>
   )
 }
-const SkeletonTwo = () => {
+const TimeSkelly = () => {
   const variants = {
     initial: {
       width: 0
@@ -130,7 +144,7 @@ const SkeletonTwo = () => {
     </motion.div>
   )
 }
-const SkeletonThree = () => {
+const PaySkelly = () => {
   const variants = {
     initial: {
       backgroundPosition: '0 50%'
@@ -145,14 +159,15 @@ const SkeletonThree = () => {
       animate='animate'
       variants={variants}
       transition={{
-        duration: 5,
+        duration: 20,
         repeat: Infinity,
-        repeatType: 'reverse'
+        repeatType: 'reverse',
+        ease: 'easeInOut'
       }}
-      className='dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex h-full min-h-[6rem] w-full flex-1 flex-col space-y-2 rounded-lg'
+      className='flex h-full min-h-[6rem] w-full flex-1 flex-col space-y-2 rounded-lg'
       style={{
         background:
-          'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)',
+          'linear-gradient(-45deg, #ffbb00, #ff8800, #e73c7e, #8a2be2)',
         backgroundSize: '400% 400%'
       }}
     >
@@ -160,7 +175,7 @@ const SkeletonThree = () => {
     </motion.div>
   )
 }
-const SkeletonFour = () => {
+const JobsSkelly = () => {
   const first = {
     initial: {
       x: 20,
@@ -200,10 +215,10 @@ const SkeletonFour = () => {
           className='h-10 w-10 rounded-full'
         /> */}
         <p className='mt-4 text-center text-xs font-semibold text-neutral-500 sm:text-sm'>
-          Just code in Vanilla Javascript
+          Small Business Help
         </p>
         <p className='mt-4 rounded-full border border-red-500 bg-red-100 px-2 py-0.5 text-xs text-red-600 dark:bg-red-900/20'>
-          Delusional
+          4 Hour
         </p>
       </motion.div>
       <motion.div className='relative z-20 flex h-full w-1/3 flex-col items-center justify-center rounded-2xl border border-neutral-200 bg-white p-4 dark:border-white/[0.1] dark:bg-black'>
@@ -215,10 +230,10 @@ const SkeletonFour = () => {
           className='h-10 w-10 rounded-full'
         /> */}
         <p className='mt-4 text-center text-xs font-semibold text-neutral-500 sm:text-sm'>
-          Tailwind CSS is cool, you know
+          Dog Walking
         </p>
         <p className='mt-4 rounded-full border border-green-500 bg-green-100 px-2 py-0.5 text-xs text-green-600 dark:bg-green-900/20'>
-          Sensible
+          1 Hour
         </p>
       </motion.div>
       <motion.div
@@ -233,16 +248,16 @@ const SkeletonFour = () => {
           className='h-10 w-10 rounded-full'
         /> */}
         <p className='mt-4 text-center text-xs font-semibold text-neutral-500 sm:text-sm'>
-          I love angular, RSC, and Redux.
+          Yard Work
         </p>
         <p className='mt-4 rounded-full border border-orange-500 bg-orange-100 px-2 py-0.5 text-xs text-orange-600 dark:bg-orange-900/20'>
-          Helpless
+          2 Hour
         </p>
       </motion.div>
     </motion.div>
   )
 }
-const SkeletonFive = () => {
+const DisputeSkelly = () => {
   const variants = {
     initial: {
       x: 0
@@ -285,17 +300,14 @@ const SkeletonFive = () => {
           width='100'
           className='h-10 w-10 rounded-full'
         /> */}
-        <p className='text-xs text-neutral-500'>
-          There are a lot of cool framerworks out there like React, Angular,
-          Vue, Svelte that can make your life ....
-        </p>
+        <p className='text-xs text-neutral-500'>Ive had an issue with ....</p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className='ml-auto flex w-3/4 flex-row items-center justify-end space-x-2 rounded-full border border-neutral-100 bg-white p-2 dark:border-white/[0.2] dark:bg-black'
+        className='ml-auto flex flex-row items-center justify-end space-x-2 rounded-full border border-neutral-100 bg-white p-2 dark:border-white/[0.2] dark:bg-black'
       >
-        <p className='text-xs text-neutral-500'>Use PHP.</p>
-        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-pink-500 to-violet-500' />
+        <p className='text-xs text-neutral-500'>We're here to help!</p>
+        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-amber-500 to-orange-800' />
       </motion.div>
     </motion.div>
   )
@@ -306,8 +318,8 @@ const items = [
     description: (
       <span className='text-sm'>Send a ping to workers in your town.</span>
     ),
-    header: <SkeletonOne />,
-    className: 'md:col-span-1',
+    header: <JobsSkelly />,
+    className: 'md:col-span-3',
     icon: <FaClipboard className='h-4 w-4 text-neutral-500' />
   },
   {
@@ -315,8 +327,8 @@ const items = [
     description: (
       <span className='text-sm'>Requests from workers in town.</span>
     ),
-    header: <SkeletonTwo />,
-    className: 'md:col-span-1',
+    header: <MessageSkelly />,
+    className: 'md:col-span-2',
     icon: <FaFileAlt className='h-4 w-4 text-neutral-500' />
   },
   {
@@ -326,7 +338,7 @@ const items = [
         Payment is held at Colony until job is complete.
       </span>
     ),
-    header: <SkeletonThree />,
+    header: <PaySkelly />,
     className: 'md:col-span-1',
     icon: <FaLightbulb className='h-4 w-4 text-neutral-500' />
   },
@@ -337,8 +349,8 @@ const items = [
         If job is not complete, payment can be sent back.
       </span>
     ),
-    header: <SkeletonFour />,
-    className: 'md:col-span-2',
+    header: <DisputeSkelly />,
+    className: 'md:col-span-1',
     icon: <FaSmile className='h-4 w-4 text-neutral-500' />
   },
 
@@ -347,8 +359,8 @@ const items = [
     description: (
       <span className='text-sm'>It depends, Create your first post!</span>
     ),
-    header: <SkeletonFive />,
-    className: 'md:col-span-1',
+    header: <TimeSkelly />,
+    className: 'md:col-span-2',
     icon: <FaFileSignature className='h-4 w-4 text-neutral-500' />
   }
 ]
