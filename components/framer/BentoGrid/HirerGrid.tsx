@@ -12,6 +12,9 @@ import {
 } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { PiMoney } from 'react-icons/pi'
+import { MdOutlinePersonPin } from 'react-icons/md'
+
 import { Button } from '@/components/ui/button'
 
 function HirerGrid() {
@@ -105,7 +108,57 @@ const MessageSkelly = () => {
     </motion.div>
   )
 }
+// const TimeSkelly = () => {
+//   const variants = {
+//     initial: {
+//       width: 0
+//     },
+//     animate: {
+//       width: '100%',
+//       transition: {
+//         duration: 0.2
+//       }
+//     },
+//     hover: {
+//       width: ['0%', '100%'],
+//       transition: {
+//         duration: 2
+//       }
+//     }
+//   }
+//   const arr = new Array(6).fill(0)
+//   return (
+//     <motion.div
+//       initial='initial'
+//       animate='animate'
+//       whileHover='hover'
+//       className='dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex h-full min-h-[6rem] w-full flex-1 flex-col space-y-2'
+//     >
+//       {arr.map((_, i) => (
+//         <motion.div
+//           key={'skelenton-two' + i}
+//           variants={variants}
+//           style={{
+//             maxWidth: Math.random() * (100 - 40) + 40 + '%'
+//           }}
+//           className='flex h-4 w-full flex-row items-center space-x-2 rounded-full border border-neutral-100 bg-neutral-100 p-2 dark:border-white/[0.2] dark:bg-black'
+//         >
+//           {/* 1 hr */}
+//         </motion.div>
+//       ))}
+//     </motion.div>
+//   )
+// }
 const TimeSkelly = () => {
+  const tasks = [
+    { task: 'Yard Work', hoursSaved: 5 },
+    { task: 'Dog Walking', hoursSaved: 3 },
+    { task: 'Small Business Help', hoursSaved: 4 },
+    { task: 'House Cleaning', hoursSaved: 2 },
+    { task: 'Grocery Shopping', hoursSaved: 1 },
+    { task: 'Car Maintenance', hoursSaved: 2 }
+  ]
+
   const variants = {
     initial: {
       width: 0
@@ -123,7 +176,7 @@ const TimeSkelly = () => {
       }
     }
   }
-  const arr = new Array(6).fill(0)
+
   return (
     <motion.div
       initial='initial'
@@ -131,16 +184,18 @@ const TimeSkelly = () => {
       whileHover='hover'
       className='dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex h-full min-h-[6rem] w-full flex-1 flex-col space-y-2'
     >
-      {arr.map((_, i) => (
+      {/* {tasks.map((task, i) => (
         <motion.div
-          key={'skelenton-two' + i}
+          key={'skeleton-two' + i}
           variants={variants}
-          style={{
-            maxWidth: Math.random() * (100 - 40) + 40 + '%'
-          }}
+          // style={{
+          //   maxWidth: Math.random() * (100 - 40) + 40 + '%'
+          // }}
           className='flex h-4 w-full flex-row items-center space-x-2 rounded-full border border-neutral-100 bg-neutral-100 p-2 dark:border-white/[0.2] dark:bg-black'
-        ></motion.div>
-      ))}
+        >
+          {task.hoursSaved} hrs - {task.task}
+        </motion.div>
+      ))} */}
     </motion.div>
   )
 }
@@ -171,7 +226,9 @@ const PaySkelly = () => {
         backgroundSize: '400% 400%'
       }}
     >
-      <motion.div className='h-full w-full rounded-lg'></motion.div>
+      <motion.div className='flex h-full w-full items-center justify-center rounded-lg'>
+        <MdOutlinePersonPin size={40} className='z-4000' />
+      </motion.div>
     </motion.div>
   )
 }

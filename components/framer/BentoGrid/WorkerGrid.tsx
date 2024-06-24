@@ -17,7 +17,7 @@ import { Button } from '@/components/ui/button'
 function WorkerGrid() {
   return (
     <>
-      <BentoGrid className='mx-auto max-w-4xl md:auto-rows-[20rem]'>
+      <BentoGrid className='mx-auto max-w-7xl md:auto-rows-[20rem]'>
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
