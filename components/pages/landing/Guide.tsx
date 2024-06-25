@@ -1,5 +1,5 @@
 import React from 'react'
-import { InfiniteMovingCards } from './framer/InfinateMovingCards'
+import { InfiniteMovingCards } from '../../framer/InfinateMovingCards'
 import {
   FaProjectDiagram,
   FaUmbrellaBeach,
@@ -14,9 +14,9 @@ const tasks = [
 
 const Guide = () => {
   return (
-    <section className='flex flex-col items-center justify-center px-4 py-20'>
+    <section className='flex flex-col py-20'>
       {/* Header */}
-      <div className='mx-auto flex flex-col text-center'>
+      <div className='mx-auto flex flex-col border p-20 text-center'>
         <h2 className='text-6xl font-semibold text-neutral-600 dark:text-neutral-400'>
           We're here to help you save time
         </h2>

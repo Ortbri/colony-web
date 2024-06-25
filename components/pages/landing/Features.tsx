@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
-import { Button } from './ui/button'
-import WorkerGrid from './framer/BentoGrid/WorkerGrid'
-import HirerGrid from './framer/BentoGrid/HirerGrid'
+import { Button } from '../../ui/button'
+import WorkerGrid from '@/components/framer/BentoGrid/WorkerGrid'
+import HirerGrid from '@/components/framer/BentoGrid/HirerGrid'
 
 function Features() {
   const [view, setView] = React.useState('hirer')

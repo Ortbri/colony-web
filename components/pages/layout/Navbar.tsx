@@ -9,7 +9,7 @@ import {
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
-import { Button } from './ui/button'
+import { Button } from '../../ui/button'
 import { IoMdMenu, IoMdClose } from 'react-icons/io'
 
 export const Navbar = ({
