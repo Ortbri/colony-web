@@ -12,16 +12,17 @@ export const FlipWords = ({
   duration?: number
   className?: string
 }) => {
+  /* ---------------------------------- state --------------------------------- */
   const [currentWord, setCurrentWord] = useState(words[0])
   const [isAnimating, setIsAnimating] = useState<boolean>(false)
-
+  /* --------------------------------- animate -------------------------------- */
   const startAnimation = useCallback(() => {
     const nextIndex = words.indexOf(currentWord) + 1
     const word = words[nextIndex % words.length]
     setCurrentWord(word)
     setIsAnimating(true)
   }, [currentWord, words])
-
+  /* -------------------------------- useeffect ------------------------------- */
   useEffect(() => {
     if (!isAnimating) {
       const timer = setTimeout(() => {
@@ -30,7 +31,7 @@ export const FlipWords = ({
       return () => clearTimeout(timer)
     }
   }, [isAnimating, duration, startAnimation])
-
+  /* --------------------------------- return --------------------------------- */
   return (
     <AnimatePresence onExitComplete={() => setIsAnimating(false)}>
       <motion.div

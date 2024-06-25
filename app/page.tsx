@@ -1,8 +1,8 @@
-import Cta from '@/components/Cta'
-import Cut from '@/components/Cut'
-import Guide from '@/components/Guide'
-import Features from '@/components/Features'
-import Intro from '@/components/Intro'
+import Cta from '@/components/pages/landing/Cta'
+import Cut from '@/components/pages/landing/Cut'
+import Guide from '@/components/pages/landing/Guide'
+import Features from '@/components/pages/landing/Features'
+import Intro from '@/components/pages/landing/Intro'
 import React from 'react'
 
 export default function Home() {

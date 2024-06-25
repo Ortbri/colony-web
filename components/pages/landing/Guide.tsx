@@ -1,5 +1,5 @@
 import React from 'react'
-import { InfiniteMovingCards } from './framer/InfinateMovingCards'
+import { InfiniteMovingCards } from '../../framer/InfinateMovingCards'
 import {
   FaProjectDiagram,
   FaUmbrellaBeach,
@@ -14,10 +14,12 @@ const tasks = [
 
 const Guide = () => {
   return (
-    <section className='flex flex-col items-center justify-center px-4 py-20'>
+    <section className='flex flex-col py-20'>
       {/* Header */}
-      <div className='mx-auto flex flex-col text-center text-6xl font-semibold text-neutral-600 dark:text-neutral-400 sm:text-6xl lg:text-8xl'>
-        <div>We're here to help you save time</div>
+      <div className='mx-auto flex flex-col border p-20 text-center'>
+        <h2 className='text-6xl font-semibold text-neutral-600 dark:text-neutral-400'>
+          We're here to help you save time
+        </h2>
         <div className='py-10 text-2xl text-neutral-500 dark:text-neutral-300'>
           Reduce the loss of time by finding trusted local helpers for your
           tasks.
@@ -25,12 +27,12 @@ const Guide = () => {
       </div>
 
       {/* Cards */}
-      <div className='mt-10 w-full'>
+      {/* <div className='mt-10 w-full'>
         <InfiniteMovingCards items={tasks} direction='right' speed='slow' />
-      </div>
+      </div> */}
 
       {/* Explanation */}
-      <div className='mt-10 text-center text-xl text-neutral-700 dark:text-neutral-300'>
+      {/* <div className='mt-10 text-center text-xl text-neutral-700 dark:text-neutral-300'>
         <p>
           Our app connects you with reliable, local helpers who can take care of
           your yard work, assist with small business tasks, and walk your dog.
@@ -44,29 +46,8 @@ const Guide = () => {
           Trust and reliability are our top priorities, which is why all our
           helpers are vetted and reviewed by other users. You can rest assured
           knowing that you're getting the best help available in your community.
-        </p>
-      </div>
-
-      {/* Trust Elements */}
-      <div className='mt-10 text-center text-xl text-neutral-700 dark:text-neutral-300'>
-        <p className='font-bold'>Trusted by Thousands</p>
-        <div className='mt-4 flex justify-center space-x-8'>
-          <img
-            src='/path/to/security-badge.png'
-            alt='Security Badge'
-            className='h-12'
-          />
-          <img
-            src='/path/to/endorsement-logo.png'
-            alt='Endorsement Logo'
-            className='h-12'
-          />
-        </div>
-        <p className='mt-4'>
-          Created by a team of dedicated professionals, our app is designed to
-          seamlessly integrate into your life and make finding help effortless.
-        </p>
-      </div>
+        </p> */}
+      {/* </div> */}
     </section>
   )
 }

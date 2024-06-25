@@ -1,8 +1,21 @@
 export const navItems = [
-  { name: 'About', link: '#about' },
-  { name: 'Projects', link: '#projects' },
-  { name: 'Testimonials', link: '#testimonials' },
-  { name: 'Contact', link: '#contact' }
+  { name: 'About', link: '/info/about' },
+  { name: 'Contact Us', link: '/info/support' }
+]
+// NAVIGATION
+export const NAV_LINKS = [
+  { href: '/', key: 'home', label: 'Home' },
+  { href: '/', key: 'how_hilink_work', label: 'How Hilink Work?' },
+  { href: '/', key: 'services', label: 'Services' },
+  { href: '/', key: 'pricing ', label: 'Pricing ' },
+  { href: '/', key: 'contact_us', label: 'Contact Us' }
+]
+// FOOTER
+export const FOOTER_LINKS = [
+  {
+    title: 'Learn More',
+    links: ['Terms of use', 'Privacy Policy', 'Contact Us']
+  }
 ]
 // NAVIGATION
 export const NAV_LINKS = [

@@ -65,15 +65,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )}
         ref={ref}
         {...props}
-      >
-        {icon && iconPosition === 'left' && (
-          <span className='mr-2'>{icon}</span>
-        )}
-        {children}
-        {icon && iconPosition === 'right' && (
-          <span className='ml-2'>{icon}</span>
-        )}
-      </Comp>
+      />
     )
   }
 )
