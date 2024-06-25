@@ -10,22 +10,22 @@ const Footer = () => {
       <div className='flex w-full max-w-7xl flex-col items-center justify-center gap-10 md:flex-row'>
         <ul className='flex items-center gap-10 text-white md:flex-row'>
           <li>
-            <Link href='/about' className='hover:text-gray-300'>
+            <Link href='/info/about' className='hover:text-gray-300'>
               About
             </Link>
           </li>
           <li>
-            <Link href='/support' className='hover:text-gray-300'>
+            <Link href='/info/support' className='hover:text-gray-300'>
               Contact Us
             </Link>
           </li>
           <li>
-            <Link href='/tos' className='hover:text-gray-300'>
+            <Link href='/info/tos' className='hover:text-gray-300'>
               Terms of Service
             </Link>
           </li>
           <li>
-            <Link href='/privacy' className='hover:text-gray-300'>
+            <Link href='/info/privacy' className='hover:text-gray-300'>
               Privacy Policy
             </Link>
           </li>
