@@ -16,20 +16,32 @@ function Intro() {
         <Spotlight className='left-full top-0 h-[80vh] w-[50vw]' fill='white' />
       </div>
       {/* details */}
-      <div className='mb-24 flex w-full max-w-xl flex-col gap-5'>
-        <h1 className='text-7xl font-semibold'>
-          Free Your Time, Reclaim Your Weekends
-        </h1>
-        <p className='text-lg text-neutral-600 dark:text-neutral-400'>
-          Connect with local help for all your tasks and enjoy more free time.
-          Small business help, dog walking, yard work, and more coming soon!
-        </p>
-        <div className='flex gap-3'>
-          <Button>Download</Button>
-          <Button variant={'outline'}>Learn More</Button>
+      <div className='flex flex-row'>
+        <div className='mb-24 flex w-full max-w-xl flex-col gap-8'>
+          <h1 className='text-8xl font-semibold'>
+            Free Your Time, Reclaim Your Weekends
+          </h1>
+          <p className='text-lg text-neutral-600 dark:text-neutral-400'>
+            Connect with local help for all your tasks and enjoy more free time.
+            Small business help, dog walking, yard work, and more coming soon!
+          </p>
+          <div className='flex gap-3'>
+            <Button>Download</Button>
+            <Button variant={'outline'}>Learn More</Button>
+          </div>
+        </div>
+        {/* right of title */}
+        <div className='hidden flex-1 items-end justify-end lg:flex'>
+          <Image
+            src='/ColonyAppImage.png'
+            className='ml -mr-28'
+            width={400}
+            height={400}
+            alt='Colony App Home Page'
+          />
         </div>
       </div>
-      {/* neb */}
+
       <div className='flex h-full flex-1 items-center justify-center py-14'>
         <div>
           <Image
@@ -39,7 +51,7 @@ function Intro() {
             alt='Nebraska Innovation Fund'
           />
         </div>
-
+        {/* neb */}
         <div className='ml-3'>
           <p className='-mb-1 text-xs font-light text-neutral-600 dark:text-neutral-400'>
             Funded by
