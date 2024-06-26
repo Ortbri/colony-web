@@ -1,7 +1,9 @@
 'use client'
-import { cn } from '@/utils/cn'
 import React from 'react'
+// import
 import { BentoGrid, BentoGridItem } from '../BentoGrid'
+// import { BentoGrid, BentoGridItem } from '../BentoGrid'
+import { cn } from '@/lib/utils'
 import {
   FaClipboard,
   FaFileAlt,

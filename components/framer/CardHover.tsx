@@ -1,9 +1,9 @@
 'use client'
-import { cn } from '@/utils/cn'
 
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
+import { cn } from '@/lib/utils'
 
 export const HoverEffect = ({
   items,

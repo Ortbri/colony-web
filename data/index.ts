@@ -11,20 +11,20 @@ export const NAV_LINKS = [
   { href: '/', key: 'contact_us', label: 'Contact Us' }
 ]
 // FOOTER
-export const FOOTER_LINKS = [
-  {
-    title: 'Learn More',
-    links: ['Terms of use', 'Privacy Policy', 'Contact Us']
-  }
-]
+// export const FOOTER_LINKS = [
+//   {
+//     title: 'Learn More',
+//     links: ['Terms of use', 'Privacy Policy', 'Contact Us']
+//   }
+// ]
 // NAVIGATION
-export const NAV_LINKS = [
-  { href: '/', key: 'home', label: 'Home' },
-  { href: '/', key: 'how_hilink_work', label: 'How Hilink Work?' },
-  { href: '/', key: 'services', label: 'Services' },
-  { href: '/', key: 'pricing ', label: 'Pricing ' },
-  { href: '/', key: 'contact_us', label: 'Contact Us' }
-]
+// export const NAV_LINKS = [
+//   { href: '/', key: 'home', label: 'Home' },
+//   { href: '/', key: 'how_hilink_work', label: 'How Hilink Work?' },
+//   { href: '/', key: 'services', label: 'Services' },
+//   { href: '/', key: 'pricing ', label: 'Pricing ' },
+//   { href: '/', key: 'contact_us', label: 'Contact Us' }
+// ]
 // FOOTER
 export const FOOTER_LINKS = [
   {

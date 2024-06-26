@@ -1,12 +1,13 @@
 'use client'
 import React from 'react'
 import { Button } from '../../ui/button'
-import WorkerGrid from '@/components/framer/BentoGrid/WorkerGrid'
 import HirerGrid from '@/components/framer/BentoGrid/HirerGrid'
+import WorkerGrid from '@/components/framer/BentoGrid/WorkerGrid'
 
 function Features() {
+  /* ---------------------------------- view ---------------------------------- */
   const [view, setView] = React.useState('hirer')
-
+  /* --------------------------------- return --------------------------------- */
   return (
     <div className='mx-auto flex flex-col gap-8'>
       <div className='mx-auto flex flex-col gap-4'>
