@@ -1,6 +1,6 @@
 'use client'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, LayoutGroup } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 export const FlipWords = ({
@@ -12,31 +12,38 @@ export const FlipWords = ({
   duration?: number
   className?: string
 }) => {
-  /* ---------------------------------- state --------------------------------- */
   const [currentWord, setCurrentWord] = useState(words[0])
   const [isAnimating, setIsAnimating] = useState<boolean>(false)
-  /* --------------------------------- animate -------------------------------- */
+
+  // thanks for the fix Julian - https://github.com/Julian-AT
   const startAnimation = useCallback(() => {
-    const nextIndex = words.indexOf(currentWord) + 1
-    const word = words[nextIndex % words.length]
+    const word = words[words.indexOf(currentWord) + 1] || words[0]
     setCurrentWord(word)
     setIsAnimating(true)
   }, [currentWord, words])
-  /* -------------------------------- useeffect ------------------------------- */
+
   useEffect(() => {
-    if (!isAnimating) {
-      const timer = setTimeout(() => {
+    if (!isAnimating)
+      setTimeout(() => {
         startAnimation()
       }, duration)
-      return () => clearTimeout(timer)
-    }
   }, [isAnimating, duration, startAnimation])
-  /* --------------------------------- return --------------------------------- */
+
   return (
-    <AnimatePresence onExitComplete={() => setIsAnimating(false)}>
+    <AnimatePresence
+      onExitComplete={() => {
+        setIsAnimating(false)
+      }}
+    >
       <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{
+          opacity: 0,
+          y: 10
+        }}
+        animate={{
+          opacity: 1,
+          y: 0
+        }}
         transition={{
           duration: 0.4,
           ease: 'easeInOut',
@@ -53,7 +60,7 @@ export const FlipWords = ({
           position: 'absolute'
         }}
         className={cn(
-          'relative z-10 inline-block text-left text-neutral-900 dark:text-neutral-100',
+          'relative z-10 inline-block px-2 text-left text-neutral-900 dark:text-neutral-100',
           className
         )}
         key={currentWord}
@@ -69,7 +76,7 @@ export const FlipWords = ({
             }}
             className='inline-block'
           >
-            {letter === ' ' ? '\u00A0' : letter}
+            {letter}
           </motion.span>
         ))}
       </motion.div>

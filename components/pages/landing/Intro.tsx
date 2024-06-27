@@ -18,16 +18,17 @@ function Intro() {
       {/* details */}
       <div className='flex flex-row'>
         <div className='mb-24 flex w-full max-w-xl flex-col gap-8'>
-          <h1 className='text-8xl font-semibold'>
-            Free Your Time, Reclaim Your Weekends
+          <h1 className='text-6xl font-bold lg:text-7xl'>
+            Free Your Time, Reclaim Your Weekends, One task at a time
           </h1>
           <p className='text-lg text-neutral-600 dark:text-neutral-400'>
             Connect with local help for all your tasks and enjoy more free time.
             Small business help, dog walking, yard work, and more coming soon!
           </p>
           <div className='flex gap-3'>
-            <Button>Download</Button>
-            <Button variant={'outline'}>Learn More</Button>
+            <Button>Download now</Button>
+            {/* apple or android */}
+            {/* <Button variant={'outline'}>Learn More</Button> */}
           </div>
         </div>
         {/* right of title */}
