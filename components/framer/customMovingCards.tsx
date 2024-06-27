@@ -107,7 +107,9 @@ export const InfiniteMovingCards = ({
               {/* upper container */}
               <div className='flex flex-row gap-4'>
                 {/* icon */}
-                <div className={`flex items-center rounded-full bg-white p-2`}>
+                <div
+                  className={`flex items-center justify-center rounded-full bg-white p-2`}
+                >
                   {item.icon}
                 </div>
                 <div className='flex flex-1 items-center'>

@@ -17,10 +17,10 @@ import { FaArrowDown } from 'react-icons/fa6'
 
 function Cut() {
   /* ---------------------------------- hook ---------------------------------- */
-  const [isInView, sectionRef] = useInView()
+  const [isInView, sectionRef] = useInView(0.1) // Adjust threshold to 0.1
   /* --------------------------------- return --------------------------------- */
   return (
-    <section ref={sectionRef} className='my-56 pb-80'>
+    <section ref={sectionRef} className='my-56'>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: [20, -5, 0] } : {}}
@@ -38,16 +38,23 @@ function Cut() {
         </div>
         {/* problem */}
         <div className='flex flex-col gap-8'>
-          <div className='mx-auto flex flex-col justify-center gap-10 px-28 text-center leading-relaxed md:leading-snug'>
+          <div className='mx-auto flex flex-col justify-center gap-10 text-center leading-relaxed md:px-28 md:leading-snug'>
             <h2 className='text-7xl font-bold'>
               14 hours, the average time spent on household tasks every week
             </h2>
-            {/* <p className='text-2xl'>Almost 2 Full Work Days</p> */}
+            {/* <p className='text-2xl'>
+              This is time that could be spent with family, pursuing hobbies, or
+              simply relaxing.
+            </p> */}
           </div>
 
           {/* cards */}
           <div className='dark:bg-grid-white/[0.05] relative flex flex-col items-center justify-center overflow-hidden rounded-md bg-white antialiased dark:bg-black'>
-            <InfiniteMovingCards items={tasks} direction='right' speed='slow' />
+            <InfiniteMovingCards
+              items={tasks}
+              direction='right'
+              speed='normal'
+            />
           </div>
           <FaArrowDown color='white' size={40} className='m-8 self-center' />
         </div>
@@ -55,6 +62,7 @@ function Cut() {
     </section>
   )
 }
+
 const tasks = [
   {
     title: 'Dog Walking',
