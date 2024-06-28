@@ -37,9 +37,9 @@ function Cut() {
           </Link>
         </div>
         {/* problem */}
-        <div className='flex flex-col gap-8'>
-          <div className='mx-auto flex flex-col justify-center gap-10 text-center leading-relaxed md:px-28 md:leading-snug'>
-            <h2 className='text-7xl font-bold'>
+        <div className='flex flex-col gap-20'>
+          <div className='mx-auto flex flex-col justify-center gap-10 text-center leading-relaxed md:leading-snug lg:px-28'>
+            <h2 className='text-4xl font-bold md:text-7xl'>
               14 hours, the average time spent on household tasks every week
             </h2>
             {/* <p className='text-2xl'>
@@ -50,11 +50,7 @@ function Cut() {
 
           {/* cards */}
           <div className='dark:bg-grid-white/[0.05] relative flex flex-col items-center justify-center overflow-hidden rounded-md bg-white antialiased dark:bg-black'>
-            <InfiniteMovingCards
-              items={tasks}
-              direction='right'
-              speed='normal'
-            />
+            <InfiniteMovingCards items={tasks} direction='right' speed='slow' />
           </div>
           <FaArrowDown color='white' size={40} className='m-8 self-center' />
         </div>
@@ -102,7 +98,7 @@ const tasks = [
     icon: <FaRegClock size={24} color='black' />
   },
   {
-    title: 'Other Household Tasks',
+    title: 'Other',
     description:
       'An average of 2.8 hours per week is spent on other household tasks.',
     time: '2.8 hours',
