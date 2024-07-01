@@ -4,7 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import useInView from '@/hooks/useInView'
-import { InfiniteMovingCards } from '@/components/framer/customMovingCards'
+import { MovingCards } from '@/components/framer/MovingCards'
 import {
   FaDog,
   FaBroom,
@@ -43,7 +43,7 @@ function Cut() {
 
         {/* cards */}
         <div className='dark:bg-grid-white/[0.05] relative flex flex-col items-center justify-center overflow-hidden rounded-md bg-white antialiased dark:bg-black'>
-          <InfiniteMovingCards items={tasks} direction='right' speed='slow' />
+          <MovingCards items={tasks} direction='right' speed='slow' />
         </div>
         {/* em */}
         <div className='flex items-center justify-center'>

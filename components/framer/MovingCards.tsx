@@ -4,7 +4,7 @@ import React, { ReactNode, useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
 import { FaDog } from 'react-icons/fa'
 
-export const InfiniteMovingCards = ({
+export const MovingCards = ({
   items,
   direction = 'left',
   speed = 'fast',
