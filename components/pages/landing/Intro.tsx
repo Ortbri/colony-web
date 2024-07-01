@@ -5,7 +5,7 @@ import { Spotlight } from '../../framer/Spotlight'
 
 function Intro() {
   return (
-    <section className='flex min-h-44 flex-col px-4 pb-14 pt-36'>
+    <section className='flex flex-col pb-14 pt-52'>
       {/* spotlight */}
       <div>
         <Spotlight
@@ -17,7 +17,7 @@ function Intro() {
       </div>
       {/* details */}
       <div className='flex flex-row'>
-        <div className='mb-24 flex w-full max-w-xl flex-col gap-8'>
+        <div className='flex w-full max-w-xl flex-col gap-8'>
           <h1 className='text-6xl font-bold lg:text-7xl'>
             Free Your Time, Reclaim Your Weekends, One task at a time
           </h1>
@@ -32,17 +32,18 @@ function Intro() {
           </div>
         </div>
         {/* right of title */}
+        {/* <div className='hidden flex-1 items-end justify-end lg:flex'> */}
         <div className='hidden flex-1 items-end justify-end lg:flex'>
           <Image
             src='/ColonyAppImage.png'
-            className='ml -mr-28'
+            className='-mr-28 -mt-20'
             width={400}
             height={400}
             alt='Colony App Home Page'
           />
         </div>
       </div>
-
+      {/* NIF */}
       <div className='flex h-full flex-1 items-center justify-center py-14'>
         <div>
           <Image

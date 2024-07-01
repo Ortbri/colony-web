@@ -2,9 +2,10 @@ import React from 'react'
 import Cta from '@/components/pages/landing/Cta'
 import Cut from '@/components/pages/landing/Cut'
 import Guide from '@/components/pages/landing/Guide'
-import Features from '@/components/pages/landing/Features'
+
 import Intro from '@/components/pages/landing/Intro'
 import Em from '@/components/pages/landing/Em'
+import Features from '@/components/pages/landing/features'
 
 export default function Home() {
   return (
@@ -13,7 +14,6 @@ export default function Home() {
         <Intro />
         <Cut />
         <Em />
-        <Guide />
         <Features />
         <Cta />
       </div>
