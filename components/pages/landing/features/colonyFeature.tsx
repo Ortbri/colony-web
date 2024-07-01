@@ -23,8 +23,13 @@ function ColonyFeature() {
 
 /* --------------------------------- skelly --------------------------------- */
 const PostSkelly = () => (
+<<<<<<< Updated upstream
   <div className='flex h-full w-full items-center justify-center overflow-hidden rounded-lg border'>
     <div className='relative h-full w-full'></div>
+=======
+  <div className='mt-6 flex h-full w-full items-center justify-center overflow-hidden rounded-lg border'>
+    <div className='relative h-full w-full'>item</div>
+>>>>>>> Stashed changes
   </div>
 )
 
@@ -33,6 +38,7 @@ const ColonyFeatureList = [
   {
     id: 1,
     item: {
+<<<<<<< Updated upstream
       title: 'Find Local Help',
       description: 'Connect with trusted local help for various tasks.',
       titlePosition: 'bottom' as 'bottom', // Ensure correct typing
@@ -49,6 +55,14 @@ const ColonyFeatureList = [
       titlePosition: 'bottom' as 'bottom' // Ensure correct typing
     },
     className: 'col-span-6 md:col-span-2'
+=======
+      title: 'Dispute Support',
+      description: 'If job is not complete, payment can be sent back.',
+      titlePosition: 'bottom' as 'bottom', // Ensure correct typing
+      content: <PostSkelly />
+    },
+    className: 'col-span-6 md:col-span-6'
+>>>>>>> Stashed changes
   }
 ]
 
