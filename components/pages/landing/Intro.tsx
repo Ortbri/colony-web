@@ -5,7 +5,7 @@ import { Spotlight } from '../../framer/Spotlight'
 
 function Intro() {
   return (
-    <section className='mx-auto flex w-full max-w-7xl flex-col pb-14 pt-52'>
+    <section className='mx-auto flex flex-col pb-14 pt-52'>
       {/* spotlight */}
       <div>
         <Spotlight

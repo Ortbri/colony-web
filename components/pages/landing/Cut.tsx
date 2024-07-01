@@ -47,8 +47,8 @@ function Cut() {
         </div>
         {/* em */}
         <div className='flex items-center justify-center'>
-          <p className='text-3xl'>
-            reducing time for family, hobbies, relaxing
+          <p className='text-2xl font-thin'>
+            Reducing time for family, personal projects, relaxing
           </p>
         </div>
         <FaArrowDown color='white' size={40} className='m-8 self-center' />

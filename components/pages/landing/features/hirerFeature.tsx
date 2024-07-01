@@ -5,60 +5,65 @@ import Image from 'next/image'
 function HirerFeature() {
   return (
     <div className='flex flex-col items-center justify-center'>
-      <h2 className='text-6xl font-bold'>Your app for getting hours back</h2>
-      <CardGrid className='m-8'>
+      <CardGrid className='py-10'>
         {HirerGridData.map((data) => (
-          <CardGridItem key={data.id} item={data} className={data.className} />
+          <CardGridItem
+            key={data.id}
+            item={data.item}
+            className={data.className}
+          />
         ))}
       </CardGrid>
     </div>
   )
 }
+
 /* --------------------------------- skelly --------------------------------- */
 const PostSkelly = () => (
-  <div className='flex h-full w-full overflow-hidden rounded-lg border'>
-    <div className='h-full w-full'>
+  <div className='flex h-full w-full items-center justify-center overflow-hidden rounded-lg border'>
+    <div className='relative h-full w-full'>
       <Image
         src='/JobPost.png'
         alt='Posting a job image'
-        layout='responsive'
-        width={16} // Maintain aspect ratio
-        height={9} // Maintain aspect ratio
-        objectFit='none'
+        layout='fill'
+        objectFit='contain'
         className='rounded-lg'
       />
     </div>
   </div>
 )
+
 /* -------------------------------- grid data ------------------------------- */
 const HirerGridData = [
   {
     id: 1,
-    title: 'Post a job',
-    className: 'col-span-6 md:col-span-6 bg-black row-span-2 ',
-    description: 'Send a ping to workers in your town.',
-    content: <PostSkelly />
+    item: {
+      title: 'Post a job',
+      description: 'Send a ping to workers in your area.',
+      titlePosition: 'left' as 'left', // Ensure correct typing
+      content: <PostSkelly />
+    },
+    className: 'col-span-6 md:col-span-6'
   },
   {
     id: 2,
-    title: 'Receieve Requests',
-    className: 'col-span-3 md:col-span-3 ',
-    description: 'Requests from workers in town.',
-    content: <PostSkelly />
+    item: {
+      title: 'Receive Requests',
+      description: 'Requests from worekrs in town.',
+      content: <PostSkelly />,
+      titlePosition: 'top' as 'top' // Ensure correct typing
+    },
+    className: 'col-span-6 md:col-span-3'
   },
   {
     id: 3,
-    title: 'Select a worker & pay',
-    className: 'col-span-3 md:col-span-3 ',
-    description: 'Payment is held at Colony until job is complete.',
-    content: <PostSkelly />
-  },
-  {
-    id: 4,
-    title: 'Job Complete',
-    className: 'col-span-3 md:col-span-6 ',
-    description: 'Start getting hours back.',
-    content: <PostSkelly />
+    item: {
+      title: 'Select a worker & pay',
+      description: 'Keep track of job progress and completion.',
+      content: <PostSkelly />,
+      titlePosition: 'top' as 'top' // Ensure correct typing
+    },
+    className: 'col-span-6 md:col-span-3'
   }
 ]
 
