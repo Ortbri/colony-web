@@ -5,7 +5,7 @@ import { Spotlight } from '../../framer/Spotlight'
 
 function Intro() {
   return (
-    <section className='flex flex-col pb-14 pt-52'>
+    <section className='mx-auto flex w-full max-w-7xl flex-col pb-14 pt-52'>
       {/* spotlight */}
       <div>
         <Spotlight
@@ -28,11 +28,9 @@ function Intro() {
           <div className='flex gap-3'>
             <Button>Download now</Button>
             {/* apple or android */}
-            {/* <Button variant={'outline'}>Learn More</Button> */}
           </div>
         </div>
         {/* right of title */}
-        {/* <div className='hidden flex-1 items-end justify-end lg:flex'> */}
         <div className='hidden flex-1 items-end justify-end lg:flex'>
           <Image
             src='/ColonyAppImage.png'

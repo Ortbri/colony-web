@@ -20,14 +20,13 @@ function Cut() {
   const [isInView, sectionRef] = useInView(0.1) // Adjust threshold to 0.1
   /* --------------------------------- return --------------------------------- */
   return (
-    <section ref={sectionRef} className='my-56'>
+    <section ref={sectionRef} className='py-56'>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: [20, -5, 0] } : {}}
         transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-        className='flex flex-col gap-8'
+        className='flex flex-col gap-10'
       >
-        {/* link */}
         <div className='flex flex-1 items-center justify-center'>
           <Link
             href='https://www.bls.gov/charts/american-time-use/activity-by-hldh.htm'
@@ -36,24 +35,23 @@ function Cut() {
             American Time Use Survey Summary
           </Link>
         </div>
-        {/* problem */}
-        <div className='flex flex-col gap-20'>
-          <div className='mx-auto flex flex-col justify-center gap-10 text-center leading-relaxed md:leading-snug lg:px-28'>
-            <h2 className='text-4xl font-bold md:text-7xl'>
-              14 hours, the average time spent on household tasks every week
-            </h2>
-            {/* <p className='text-2xl'>
-              This is time that could be spent with family, pursuing hobbies, or
-              simply relaxing.
-            </p> */}
-          </div>
-
-          {/* cards */}
-          <div className='dark:bg-grid-white/[0.05] relative flex flex-col items-center justify-center overflow-hidden rounded-md bg-white antialiased dark:bg-black'>
-            <InfiniteMovingCards items={tasks} direction='right' speed='slow' />
-          </div>
-          <FaArrowDown color='white' size={40} className='m-8 self-center' />
+        <div className='mx-auto flex flex-col justify-center gap-10 text-center leading-relaxed md:leading-snug lg:px-28'>
+          <h2 className='text-4xl font-bold md:text-6xl'>
+            14 hours, the average time spent on household tasks every week
+          </h2>
         </div>
+
+        {/* cards */}
+        <div className='dark:bg-grid-white/[0.05] relative flex flex-col items-center justify-center overflow-hidden rounded-md bg-white antialiased dark:bg-black'>
+          <InfiniteMovingCards items={tasks} direction='right' speed='slow' />
+        </div>
+        {/* em */}
+        <div className='flex items-center justify-center'>
+          <p className='text-3xl'>
+            reducing time for family, hobbies, relaxing
+          </p>
+        </div>
+        <FaArrowDown color='white' size={40} className='m-8 self-center' />
       </motion.div>
     </section>
   )
