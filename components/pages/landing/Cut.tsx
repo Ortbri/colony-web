@@ -1,93 +1,107 @@
-import React from 'react'
-import { FlipWords } from '../../framer/FlipWords'
-import { HoverEffect } from '../../framer/CardHover'
-import { Button } from '../../ui/button'
-import Link from 'next/link'
+'use client'
 
-const tasks = [
-  {
-    title: 'Dog Walking',
-    description:
-      'Walking our dogs every day is a necessity for the well-being of our pet.',
-    link: ''
-  },
-  {
-    title: 'Yard Work',
-    description:
-      'Keeping your yard clean and maintained can be time-consuming.',
-    link: ''
-  },
-  {
-    title: 'Household tasks',
-    description:
-      'Daily chores around the house that take up a significant amount of time.',
-    link: ''
-  }
-]
+import React from 'react'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import useInView from '@/hooks/useInView'
+import { MovingCards } from '@/components/framer/MovingCards'
+import {
+  FaDog,
+  FaBroom,
+  FaUtensils,
+  FaShoppingCart,
+  FaRegClock
+} from 'react-icons/fa'
+import { GiHighGrass } from 'react-icons/gi'
+import { FaArrowDown } from 'react-icons/fa6'
 
 function Cut() {
+  /* ---------------------------------- hook ---------------------------------- */
+  const [isInView, sectionRef] = useInView(0.1) // Adjust threshold to 0.1
+  /* --------------------------------- return --------------------------------- */
   return (
-    <section className=''>
-      {/* card */}
-      <div className='flex w-full flex-1 flex-col rounded-3xl'>
-        {/* item 1 */}
-        <div className='flex flex-1 flex-col items-center gap-8 pt-14'>
-          <h2 className='text-center text-7xl font-semibold'>14 hours</h2>
-          <p className='text-center text-4xl'>
-            The average time spent on household tasks every week
-          </p>
+    <section ref={sectionRef} className='py-56'>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: [20, -5, 0] } : {}}
+        transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
+        className='flex flex-col gap-10'
+      >
+        <div className='flex flex-1 items-center justify-center'>
+          <Link
+            href='https://www.bls.gov/charts/american-time-use/activity-by-hldh.htm'
+            className='text-3xl font-thin italic'
+          >
+            American Time Use Survey Summary
+          </Link>
         </div>
-        {/* item 2 */}
-        <div className='mx-auto max-w-5xl px-8'>
-          <HoverEffect items={tasks} />
+        <div className='mx-auto flex flex-col justify-center gap-10 text-center leading-relaxed md:leading-snug lg:px-28'>
+          <h2 className='text-4xl font-bold md:text-6xl'>
+            14 hours, the average time spent on household tasks every week
+          </h2>
         </div>
 
-        <Link
-          className='flex flex-col items-center'
-          href='https://www.bls.gov/news.release/atus.nr0.htm#:~:text=(See%20table%201.),(See%20table%201.)'
-          passHref
-        >
-          <Button variant={'link'} className='text-xs text-gray-500'>
-            American Time Use Survey Summary
-          </Button>
-        </Link>
-      </div>
+        {/* cards */}
+        <div className='dark:bg-grid-white/[0.05] relative flex flex-col items-center justify-center overflow-hidden rounded-md bg-white antialiased dark:bg-black'>
+          <MovingCards items={tasks} direction='right' speed='slow' />
+        </div>
+        {/* em */}
+        <div className='flex items-center justify-center'>
+          <p className='text-2xl font-thin'>
+            Reducing time for family, personal projects, relaxing
+          </p>
+        </div>
+        <FaArrowDown color='white' size={40} className='m-8 self-center' />
+      </motion.div>
     </section>
   )
 }
 
+const tasks = [
+  {
+    title: 'Dog Walking',
+    description: 'An average of 1 hour per week is spent on dog walking.',
+    time: '1 hour',
+    icon: <FaDog size={24} color='black' />
+  },
+  {
+    title: 'Lawn Mowing',
+    description: 'An average of 1.5 hours per week is spent on lawn mowing.',
+    time: '1.5 hours',
+    icon: <GiHighGrass size={24} color='black' />
+  },
+  {
+    title: 'Cleaning',
+    description: 'An average of 2.5 hours per week is spent on cleaning.',
+    time: '2.5 hours',
+    icon: <FaBroom size={24} color='black' />
+  },
+  {
+    title: 'Cooking',
+    description: 'An average of 5.5 hours per week is spent on cooking.',
+    time: '5.5 hours',
+    icon: <FaUtensils size={24} color='black' />
+  },
+  {
+    title: 'Grocery Shopping',
+    description:
+      'An average of 1.2 hours per week is spent on grocery shopping.',
+    time: '1.2 hours',
+    icon: <FaShoppingCart size={24} color='black' />
+  },
+  {
+    title: 'Laundry',
+    description: 'An average of 1.5 hours per week is spent on laundry.',
+    time: '1.5 hours',
+    icon: <FaRegClock size={24} color='black' />
+  },
+  {
+    title: 'Other',
+    description:
+      'An average of 2.8 hours per week is spent on other household tasks.',
+    time: '2.8 hours',
+    icon: <FaDog size={24} color='black' />
+  }
+]
+
 export default Cut
-
-// const personal = [
-//   {
-//     title: 'Family',
-//     description: 'Missing out on quality time with family and friends.',
-//     link: ''
-//   },
-//   {
-//     title: 'Personal Projects',
-//     description: 'Less time for hobbies and personal projects.',
-//     link: ''
-//   },
-//   {
-//     title: 'Time for you',
-//     description: 'Reduced time for relaxation and self-care.',
-//     link: ''
-//   }
-// ]
-
-{
-  /* item 3 */
-}
-{
-  /* <div className='flex flex-col items-center gap-4'>
-          <h3 className='text-4xl font-semibold'>That's a lot of time</h3>
-          <p className='text-xl text-gray-400'>Taking time away from...</p>
-        </div>
-        <div className='mx-auto max-w-5xl px-8'>
-          <HoverEffect items={personal} />
-        </div> */
-}
-{
-  /* link research */
-}

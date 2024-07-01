@@ -1,18 +1,25 @@
 'use client'
 import React from 'react'
-import { Button } from '../../ui/button'
-import HirerGrid from '@/components/framer/BentoGrid/HirerGrid'
-import WorkerGrid from '@/components/framer/BentoGrid/WorkerGrid'
+import { Button } from '../../../ui/button'
+import HirerFeature from './hirerFeature'
+import WorkerFeature from './workerFeature'
+import ColonyFeature from './colonyFeature'
 
 function Features() {
   /* ---------------------------------- view ---------------------------------- */
   const [view, setView] = React.useState('hirer')
   /* --------------------------------- return --------------------------------- */
   return (
-    <div className='mx-auto flex flex-col gap-8'>
-      <div className='mx-auto flex flex-col gap-4'>
-        <h1 className='text-8xl font-semibold'>Features</h1>
-        <div className='flex flex-row items-center justify-center gap-4'>
+    <section className='py-14'>
+      {/* header */}
+      <div className='flex flex-col items-center justify-center gap-4'>
+        <h2 className='text-6xl font-bold'>
+          {view === 'hirer'
+            ? 'Your app for getting hours back'
+            : 'Start earning extra income'}
+        </h2>
+        {/* button  */}
+        <div className='flex flex-row gap-4 py-4'>
           <Button
             size={'lg'}
             onClick={() => setView('hirer')}
@@ -29,9 +36,11 @@ function Features() {
           </Button>
         </div>
       </div>
-
-      {view === 'hirer' ? <HirerGrid /> : <WorkerGrid />}
-    </div>
+      {/* grid */}
+      {view === 'hirer' ? <HirerFeature /> : <WorkerFeature />}
+      {/* feature for both  */}
+      <ColonyFeature />
+    </section>
   )
 }
 

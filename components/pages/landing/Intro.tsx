@@ -5,7 +5,7 @@ import { Spotlight } from '../../framer/Spotlight'
 
 function Intro() {
   return (
-    <section className='flex min-h-44 flex-col px-4 pb-14 pt-36'>
+    <section className='mx-auto flex flex-col pb-14 pt-52'>
       {/* spotlight */}
       <div>
         <Spotlight
@@ -17,31 +17,31 @@ function Intro() {
       </div>
       {/* details */}
       <div className='flex flex-row'>
-        <div className='mb-24 flex w-full max-w-xl flex-col gap-8'>
-          <h1 className='text-8xl font-semibold'>
-            Free Your Time, Reclaim Your Weekends
+        <div className='flex w-full max-w-xl flex-col gap-8'>
+          <h1 className='text-6xl font-bold lg:text-7xl'>
+            Free Your Time, Reclaim Your Weekends, One task at a time
           </h1>
           <p className='text-lg text-neutral-600 dark:text-neutral-400'>
             Connect with local help for all your tasks and enjoy more free time.
             Small business help, dog walking, yard work, and more coming soon!
           </p>
           <div className='flex gap-3'>
-            <Button>Download</Button>
-            <Button variant={'outline'}>Learn More</Button>
+            <Button>Download now</Button>
+            {/* apple or android */}
           </div>
         </div>
         {/* right of title */}
         <div className='hidden flex-1 items-end justify-end lg:flex'>
           <Image
             src='/ColonyAppImage.png'
-            className='ml -mr-28'
+            className='-mr-28 -mt-20'
             width={400}
             height={400}
             alt='Colony App Home Page'
           />
         </div>
       </div>
-
+      {/* NIF */}
       <div className='flex h-full flex-1 items-center justify-center py-14'>
         <div>
           <Image
