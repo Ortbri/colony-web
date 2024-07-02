@@ -24,12 +24,12 @@ function Cut() {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: [20, -5, 0] } : {}}
         transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-        className='flex flex-col gap-10'
+        className='flex flex-col items-center gap-10'
       >
         <div className='flex flex-1 items-center justify-center'>
           <Link
             href='https://www.bls.gov/charts/american-time-use/activity-by-hldh.htm'
-            className='text-3xl font-thin italic'
+            className='text-center text-3xl font-thin italic'
           >
             American Time Use Survey Summary
           </Link>
@@ -46,7 +46,7 @@ function Cut() {
         </div>
         {/* em */}
         <div className='flex items-center justify-center'>
-          <p className='text-2xl font-thin text-amber-400'>
+          <p className='text-center text-2xl'>
             Reducing time for family, personal projects, relaxing
           </p>
         </div>
