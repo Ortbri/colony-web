@@ -5,7 +5,7 @@ import { Spotlight } from '../../framer/Spotlight'
 
 function Intro() {
   return (
-    <section className='mx-auto flex flex-col pb-14 pt-52'>
+    <section className='mx-auto flex flex-col pb-14 pt-40 md:pt-52'>
       {/* spotlight */}
       <div>
         <Spotlight
@@ -16,9 +16,9 @@ function Intro() {
         <Spotlight className='left-full top-0 h-[80vh] w-[50vw]' fill='white' />
       </div>
       {/* details */}
-      <div className='flex flex-row'>
-        <div className='flex w-full max-w-xl flex-col gap-8'>
-          <h1 className='text-6xl font-bold lg:text-7xl'>
+      <div className='flex flex-col-reverse items-center md:flex-row md:items-start'>
+        <div className='flex w-full max-w-xl flex-col items-center gap-8 text-center md:items-start md:text-left'>
+          <h1 className='text-center text-6xl font-bold md:text-left lg:text-7xl'>
             Free Your Time, Reclaim Your Weekends, One task at a time
           </h1>
           <p className='text-lg text-neutral-600 dark:text-neutral-400'>
@@ -27,14 +27,12 @@ function Intro() {
           </p>
           <div className='flex gap-3'>
             <Button>Download now</Button>
-            {/* apple or android */}
           </div>
         </div>
-        {/* right of title */}
-        <div className='hidden flex-1 items-end justify-end lg:flex'>
+        <div className='flex flex-1 items-center justify-center lg:items-end lg:justify-end'>
           <Image
-            src='/ColonyAppImage.png'
-            className='-mr-28 -mt-20'
+            src='/ColonyHome.png'
+            className='mt-5 lg:-mr-14 lg:mt-0'
             width={400}
             height={400}
             alt='Colony App Home Page'
@@ -42,7 +40,7 @@ function Intro() {
         </div>
       </div>
       {/* NIF */}
-      <div className='flex h-full flex-1 items-center justify-center py-14'>
+      <div className='flex h-full flex-1 items-center justify-center py-20'>
         <div>
           <Image
             src='/NIF.png'
