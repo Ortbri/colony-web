@@ -1,16 +1,8 @@
 'use client'
 
-import { Card, CardContent } from '@/components/ui/card'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from '@/components/ui/carousel'
+import React from 'react'
 import useInView from '@/hooks/useInView'
 import { motion } from 'framer-motion'
-import React from 'react'
 
 const Guide = () => {
   const [isInView, sectionRef] = useInView()

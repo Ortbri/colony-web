@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className='flex flex-col items-center gap-8 bg-black px-5 py-14'>
       {/* links */}
       <div className='flex w-full max-w-7xl flex-col items-center justify-center gap-10 md:flex-row'>
-        <ul className='flex items-center gap-10 text-white md:flex-row'>
+        <ul className='flex flex-col items-center gap-10 pb-8 text-white md:flex-row md:pb-0'>
           <li>
             <Link href='/info/about' className='hover:text-gray-300'>
               About
