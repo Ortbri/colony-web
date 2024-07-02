@@ -10,10 +10,10 @@ function Features() {
   const [view, setView] = React.useState('hirer')
   /* --------------------------------- return --------------------------------- */
   return (
-    <section className='py-14'>
+    <section className=''>
       {/* header */}
       <div className='flex flex-col items-center justify-center gap-4'>
-        <h2 className='text-6xl font-bold'>
+        <h2 className='mx-14 text-center text-6xl font-bold'>
           {view === 'hirer'
             ? 'Your app for getting hours back'
             : 'Start earning extra income'}

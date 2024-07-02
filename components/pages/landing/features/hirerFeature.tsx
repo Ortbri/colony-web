@@ -5,7 +5,7 @@ import Image from 'next/image'
 function HirerFeature() {
   return (
     <div className='flex flex-col items-center justify-center'>
-      <CardGrid className='py-10'>
+      <CardGrid className=''>
         {HirerGridData.map((data) => (
           <CardGridItem
             key={data.id}
@@ -69,7 +69,7 @@ const HirerGridData = [
     item: {
       title: 'Post a job',
       description: 'Send a ping to workers in your area.',
-      titlePosition: 'left' as 'left', // Ensure correct typing
+      titlePosition: 'top' as 'top', // Ensure correct typing
       content: <PostJobSkelly />
     },
     className: 'col-span-4 md:col-span-6'

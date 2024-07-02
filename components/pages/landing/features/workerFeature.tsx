@@ -5,7 +5,7 @@ import Image from 'next/image'
 function WorkerFeature() {
   return (
     <div className='flex flex-col items-center justify-center'>
-      <CardGrid className='py-10'>
+      <CardGrid className=''>
         {WorkerGridData.map((data) => (
           <CardGridItem
             key={data.id}
@@ -68,7 +68,7 @@ const WorkerGridData = [
     item: {
       title: 'Find a Job',
       description: 'Get Notified when jobs are near you',
-      titlePosition: 'left' as 'left', // Ensure correct typing
+      titlePosition: 'top' as 'top', // Ensure correct typing
       content: <JobsSkelly />
     },
     className: 'col-span-4 md:col-span-6'
