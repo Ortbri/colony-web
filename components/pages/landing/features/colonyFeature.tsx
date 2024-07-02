@@ -1,45 +1,32 @@
-import { CardGrid, CardGridItem } from '@/components/cards/gridCard'
 import React from 'react'
-import Image from 'next/image'
+import { MdEmail, MdSupport } from 'react-icons/md'
 
 function ColonyFeature() {
   return (
-    <div className='flex flex-col items-center justify-center'>
-      <div>
-        <h2 className='text-4xl font-bold'>How we help</h2>
+    <div className='flex flex-col items-center justify-center rounded-xl border bg-black p-10'>
+      <div className='w-full'>
+        <dl className='m-4 flex flex-col justify-center gap-16 md:flex-row'>
+          {/* item 1 */}
+          <div className='flex flex-col items-center text-center'>
+            <MdEmail className='mb-4 h-12 w-12 text-white' />
+            <dt className='text-xl font-bold'>Customer Support</dt>
+            <dd className='mx-auto mt-2 text-lg text-gray-400'>
+              Email Brian@joincolonyapp.com
+            </dd>
+          </div>
+
+          {/* item 2 */}
+          <div className='flex flex-col items-center text-center'>
+            <MdSupport className='mb-4 h-12 w-12 text-white' />
+            <dt className='text-xl font-bold'>Dispute Support</dt>
+            <dd className='mx-auto mt-2 text-lg text-gray-400'>
+              If job is not complete, payment will be returned
+            </dd>
+          </div>
+        </dl>
       </div>
-      <CardGrid className='py-10'>
-        {ColonyFeatureList.map((data) => (
-          <CardGridItem
-            key={data.id}
-            item={data.item}
-            className={data.className}
-          />
-        ))}
-      </CardGrid>
     </div>
   )
 }
-
-/* --------------------------------- skelly --------------------------------- */
-const PostSkelly = () => (
-  <div className='mt-6 flex h-full w-full items-center justify-center overflow-hidden rounded-lg border'>
-    <div className='relative h-full w-full'>item</div>
-  </div>
-)
-
-/* -------------------------------- grid data ------------------------------- */
-const ColonyFeatureList = [
-  {
-    id: 1,
-    item: {
-      title: 'Dispute Support',
-      description: 'If job is not complete, payment can be sent back.',
-      titlePosition: 'bottom' as 'bottom', // Ensure correct typing
-      content: <PostSkelly />
-    },
-    className: 'col-span-6 md:col-span-6'
-  }
-]
 
 export default ColonyFeature

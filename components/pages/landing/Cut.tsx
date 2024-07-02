@@ -46,7 +46,7 @@ function Cut() {
         </div>
         {/* em */}
         <div className='flex items-center justify-center'>
-          <p className='text-2xl font-thin'>
+          <p className='text-2xl font-thin text-amber-400'>
             Reducing time for family, personal projects, relaxing
           </p>
         </div>

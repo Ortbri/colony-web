@@ -73,7 +73,7 @@ export const CardGridItem = ({
               <CardDescription>{item.description}</CardDescription>
             </CardHeader>
           )}
-          <CardContent className='flex min-h-[200px] flex-grow overflow-hidden sm:min-h-[300px]'>
+          <CardContent className='flex min-h-[200px] flex-grow overflow-hidden p-0 sm:min-h-[300px]'>
             {item.content}
           </CardContent>
           {item.titlePosition === 'right' && (
