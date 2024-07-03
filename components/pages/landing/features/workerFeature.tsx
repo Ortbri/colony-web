@@ -1,6 +1,7 @@
 import { CardGrid, CardGridItem } from '@/components/cards/gridCard'
 import React from 'react'
 import Image from 'next/image'
+import { IoMdCheckmark } from 'react-icons/io'
 
 function WorkerFeature() {
   return (
@@ -17,16 +18,16 @@ function WorkerFeature() {
     </div>
   )
 }
+
 /* --------------------------------- skelly --------------------------------- */
 const JobsSkelly = () => (
   <div className='flex h-full w-full overflow-hidden rounded-lg'>
     <div className='relative h-full w-full'>
       <Image
-        src='/JobPost.png'
+        src='/JobDetails.png'
         alt='Posting a job image'
-        layout='fill'
-        objectFit='contain'
-        objectPosition='bottom center'
+        fill
+        style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
         className='rounded-lg'
       />
     </div>
@@ -38,9 +39,8 @@ const RequestJobSkelly = () => (
       <Image
         src='/RequestJob.png'
         alt='Posting a job image'
-        layout='fill'
-        objectFit='contain'
-        objectPosition='bottom center'
+        fill
+        style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
         className='rounded-lg'
       />
     </div>
@@ -52,14 +52,25 @@ const CompleteJobSkelly = () => (
       <Image
         src='/CompleteJob.png'
         alt='Posting a job image'
-        layout='fill'
-        objectFit='contain'
-        objectPosition='bottom center'
+        fill
+        style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
         className='rounded-lg'
       />
     </div>
   </div>
 )
+
+const CompleteSkelly = () => {
+  return (
+    <div className='my-24 flex flex-col items-center'>
+      <IoMdCheckmark size={100} />
+      <div className='flex flex-col items-center gap-6'>
+        <h3 className='text-4xl font-bold'>Complete</h3>
+        <p>Extra income. One task at a time.</p>
+      </div>
+    </div>
+  )
+}
 
 /* -------------------------------- grid data ------------------------------- */
 const WorkerGridData = [
@@ -68,7 +79,6 @@ const WorkerGridData = [
     item: {
       title: 'Find a Job',
       description: 'Get Notified when jobs are near you',
-      titlePosition: 'top' as 'top', // Ensure correct typing
       content: <JobsSkelly />
     },
     className: 'col-span-4 md:col-span-6'
@@ -78,8 +88,7 @@ const WorkerGridData = [
     item: {
       title: 'Request Jobs',
       description: 'Send requests for jobs you are interested in.',
-      content: <RequestJobSkelly />,
-      titlePosition: 'top' as 'top' // Ensure correct typing
+      content: <RequestJobSkelly />
     },
     className: 'col-span-6 md:col-span-3'
   },
@@ -88,10 +97,16 @@ const WorkerGridData = [
     item: {
       title: 'Complete Jobs & Receive Payment',
       description: 'Keep track of job progress and completion.',
-      content: <CompleteJobSkelly />,
-      titlePosition: 'top' as 'top' // Ensure correct typing
+      content: <CompleteJobSkelly />
     },
     className: 'col-span-6 md:col-span-3'
+  },
+  {
+    id: 4,
+    item: {
+      content: <CompleteSkelly />
+    },
+    className: 'col-span-6 md:col-span-6'
   }
 ]
 

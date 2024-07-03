@@ -18,7 +18,7 @@ interface DrawerProps {
   }[]
 }
 
-export function DrawerDemo({ navItems }: DrawerProps) {
+export function NavDrawer({ navItems }: DrawerProps) {
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -28,11 +28,11 @@ export function DrawerDemo({ navItems }: DrawerProps) {
           icon={<IoMdMenu size={24} />}
         />
       </DrawerTrigger>
-      <DrawerContent>
+      <DrawerContent className='pb-52'>
         <div className='mx-auto w-full max-w-sm'>
-          <DrawerHeader className='justify-center'>
+          {/* <DrawerHeader className='justify-center'>
             <DrawerTitle className='text-3xl'>Links</DrawerTitle>
-          </DrawerHeader>
+          </DrawerHeader> */}
           <ul className='flex flex-col items-center space-y-4 py-24'>
             {navItems.map((navItem, idx) => (
               <li key={`menu-link=${idx}`}>

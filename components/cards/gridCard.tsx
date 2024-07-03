@@ -40,10 +40,9 @@ type CardProps = React.ComponentProps<typeof Card>
 interface CardGridItemProps {
   className?: string
   item: {
-    title: string
+    title?: string
     description?: string
-    content: ReactNode
-    titlePosition?: 'left' | 'right' | 'top' | 'bottom'
+    content?: ReactNode
   }
   props?: CardProps
 }
@@ -54,49 +53,23 @@ export const CardGridItem = ({
   ...props
 }: CardGridItemProps) => {
   return (
-    <Card className={cn('flex h-full flex-col bg-black', className)} {...props}>
+    <Card
+      className={cn(
+        'flex h-full flex-col border-amber-950 bg-black',
+        className
+      )}
+      {...props}
+    >
       {/* top */}
-      {item.titlePosition === 'top' && (
-        <CardHeader>
-          <CardTitle className='text-3xl'>{item.title}</CardTitle>
-          <CardDescription>{item.description}</CardDescription>
-        </CardHeader>
-      )}
-      {/* sides left or right w/ content*/}
-      {(item.titlePosition === 'left' || item.titlePosition === 'right') && (
-        <div className='flex h-full flex-col md:flex-row'>
-          {item.titlePosition === 'left' && (
-            <CardHeader className='flex w-full flex-col justify-center md:w-1/4'>
-              <CardTitle className='text-3xl md:text-5xl'>
-                {item.title}
-              </CardTitle>
-              <CardDescription>{item.description}</CardDescription>
-            </CardHeader>
-          )}
-          <CardContent className='flex min-h-[200px] flex-grow overflow-hidden p-0 sm:min-h-[300px]'>
-            {item.content}
-          </CardContent>
-          {item.titlePosition === 'right' && (
-            <CardHeader className='flex w-full flex-col justify-center md:w-1/4'>
-              <CardTitle>{item.title}</CardTitle>
-              <CardDescription>{item.description}</CardDescription>
-            </CardHeader>
-          )}
-        </div>
-      )}
+      <CardHeader>
+        <CardTitle className='text-4xl'>{item.title}</CardTitle>
+        <CardDescription>{item.description}</CardDescription>
+      </CardHeader>
+
       {/* vertical content */}
-      {item.titlePosition !== 'left' && item.titlePosition !== 'right' && (
-        <CardContent className='flex min-h-[200px] flex-grow items-center justify-center overflow-hidden p-0 sm:min-h-[300px]'>
-          {item.content}
-        </CardContent>
-      )}
-      {/* bottom */}
-      {item.titlePosition === 'bottom' && (
-        <CardFooter className='flex flex-col'>
-          <CardTitle>{item.title}</CardTitle>
-          <CardDescription>{item.description}</CardDescription>
-        </CardFooter>
-      )}
+      <CardContent className='flex min-h-[200px] flex-grow items-center justify-center overflow-hidden p-0 sm:min-h-[300px]'>
+        {item.content}
+      </CardContent>
     </Card>
   )
 }

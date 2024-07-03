@@ -1,6 +1,7 @@
 import { CardGrid, CardGridItem } from '@/components/cards/gridCard'
 import React from 'react'
 import Image from 'next/image'
+import { IoMdCheckmark } from 'react-icons/io'
 
 function HirerFeature() {
   return (
@@ -25,9 +26,8 @@ const PostJobSkelly = () => (
       <Image
         src='/CreateJob.png'
         alt='Posting a job image'
-        layout='fill'
-        objectFit='contain'
-        objectPosition='bottom center'
+        fill
+        style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
         className='rounded-lg'
       />
     </div>
@@ -39,9 +39,8 @@ const RequestSkelly = () => (
       <Image
         src='/jobRequests.png'
         alt='Posting a job image'
-        layout='fill'
-        objectFit='contain'
-        objectPosition='bottom center'
+        fill
+        style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
         className='rounded-lg'
       />
     </div>
@@ -53,15 +52,24 @@ const PaySkelly = () => (
       <Image
         src='/JobPay.png'
         alt='Posting a job image'
-        layout='fill'
-        objectFit='contain'
-        objectPosition='bottom center'
+        fill
+        style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
         className='rounded-lg'
       />
     </div>
   </div>
 )
-
+const CompleteSkelly = () => {
+  return (
+    <div className='my-24 flex flex-col items-center'>
+      <IoMdCheckmark size={100} />
+      <div className='flex flex-col items-center gap-6'>
+        <h3 className='text-4xl font-bold'>Complete</h3>
+        <p>Time saved? it depends. Start one hour at a time.</p>
+      </div>
+    </div>
+  )
+}
 /* -------------------------------- grid data ------------------------------- */
 const HirerGridData = [
   {
@@ -93,6 +101,13 @@ const HirerGridData = [
       titlePosition: 'top' as 'top' // Ensure correct typing
     },
     className: 'col-span-6 md:col-span-3'
+  },
+  {
+    id: 4,
+    item: {
+      content: <CompleteSkelly />
+    },
+    className: 'col-span-6 md:col-span-6'
   }
 ]
 
