@@ -12,13 +12,13 @@ function Features() {
   return (
     <section className=''>
       {/* header */}
-      <div className='flex flex-col items-center justify-center gap-4'>
-        <h2 className='mx-14 text-center text-6xl font-bold'>
+      <div className='flex flex-col items-center justify-center gap-4 py-8'>
+        <h2 className='mx-4 text-center text-6xl font-bold md:mx-14'>
           {view === 'hirer'
             ? 'Your app for getting hours back'
             : 'Start earning extra income'}
         </h2>
-        {/* button  */}
+        {/* buttons */}
         <div className='flex flex-row gap-4 py-4'>
           <Button
             size={'lg'}
@@ -38,8 +38,7 @@ function Features() {
       </div>
       {/* grid */}
       {view === 'hirer' ? <HirerFeature /> : <WorkerFeature />}
-      {/* feature for both  */}
-      <ColonyFeature />
+      {/* <ColonyFeature /> */}
     </section>
   )
 }

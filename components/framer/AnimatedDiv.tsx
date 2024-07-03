@@ -31,7 +31,7 @@ const AnimatedDiv: React.FC<CleanSkellyProps> = ({
         repeat: Infinity,
         repeatType: 'reverse'
       }}
-      className={`dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex h-full min-h-[6rem] w-full flex-1 flex-col space-y-2 rounded-lg ${className}`}
+      className={`dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex h-full min-h-[6rem] w-full flex-1 flex-col space-y-2 rounded-3xl ${className}`}
       style={{
         background:
           'linear-gradient(-45deg, #ffbb00, #e0b3ff, #d291bc, #ffd27f)',
