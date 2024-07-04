@@ -19,7 +19,7 @@ function Cut() {
   const [isInView, sectionRef] = useInView(0.1) // Adjust threshold to 0.1
   /* --------------------------------- return --------------------------------- */
   return (
-    <section ref={sectionRef} className='pt-52'>
+    <section ref={sectionRef} className='py-52'>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: [20, -5, 0] } : {}}

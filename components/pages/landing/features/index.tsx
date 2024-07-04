@@ -10,7 +10,7 @@ function Features() {
   const [view, setView] = React.useState('hirer')
   /* --------------------------------- return --------------------------------- */
   return (
-    <section className=''>
+    <section className='py-14'>
       {/* header */}
       <div className='flex flex-col items-center justify-center gap-4'>
         <h2 className='mx-14 text-center text-6xl font-bold'>

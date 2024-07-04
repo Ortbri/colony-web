@@ -73,7 +73,7 @@ export const Navbar = ({
         >
           <div className='flex items-center'>
             <Image
-              src={'/colonyLogo.png'}
+              src={'/ColonyLogo.png'}
               width={50}
               height={50}
               alt='Colony Logo'
