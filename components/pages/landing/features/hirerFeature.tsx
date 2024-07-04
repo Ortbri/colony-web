@@ -24,10 +24,9 @@ const PostJobSkelly = () => (
     <div className='relative h-full w-full'>
       <Image
         src='/CreateJob.png'
-        alt='Posting a job image'
-        layout='fill'
-        objectFit='contain'
-        objectPosition='bottom center'
+        alt='Screen showing job posting options on our app'
+        fill
+        style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
         className='rounded-lg'
       />
     </div>
@@ -37,11 +36,10 @@ const RequestSkelly = () => (
   <div className='flex h-full w-full overflow-hidden rounded-lg'>
     <div className='relative h-full w-full'>
       <Image
-        src='/jobRequests.png'
-        alt='Posting a job image'
-        layout='fill'
-        objectFit='contain'
-        objectPosition='bottom center'
+        src='/JobRequests.png'
+        alt='Screen showing incoming messages from workers interested in your job'
+        fill
+        style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
         className='rounded-lg'
       />
     </div>
@@ -52,10 +50,9 @@ const PaySkelly = () => (
     <div className='relative h-full w-full'>
       <Image
         src='/JobPay.png'
-        alt='Posting a job image'
-        layout='fill'
-        objectFit='contain'
-        objectPosition='bottom center'
+        alt='Screen showing the payment process for paying a worker before the job'
+        fill
+        style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
         className='rounded-lg'
       />
     </div>
