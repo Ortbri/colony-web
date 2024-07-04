@@ -64,7 +64,7 @@ const CompleteSkelly = () => {
   return (
     <div className='my-24 flex flex-col items-center'>
       <IoMdCheckmark size={100} />
-      <div className='flex flex-col items-center gap-6'>
+      <div className='mx-14 flex flex-col items-center gap-6 text-center'>
         <h3 className='text-4xl font-bold'>Complete</h3>
         <p>Extra income. One task at a time.</p>
       </div>

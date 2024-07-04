@@ -5,9 +5,21 @@ import { FaInstagram, FaGithub, FaFacebookF, FaTiktok } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col items-center gap-8 bg-black px-5 py-14'>
-      {/* links */}
+    <footer className='flex flex-col items-center gap-8 border-t-2 px-5 py-14'>
       <div className='flex w-full max-w-7xl flex-col items-center justify-center gap-10 md:flex-row'>
+        {/* image here */}
+        <div className='flex items-center'>
+          <Link href={'/'}>
+            <Image
+              src={'/ColonyLogoWhite.png'}
+              width={50}
+              height={50}
+              alt='Colony Logo'
+            />
+          </Link>
+        </div>
+        {/* links */}
+
         <ul className='flex flex-col items-center gap-10 pb-8 text-white md:flex-row md:pb-0'>
           <li>
             <Link href='/info/about' className='hover:text-gray-300'>

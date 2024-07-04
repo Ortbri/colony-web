@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function TermsOfService() {
   return (
-    <div className='p-14'>
+    <div className='p-14 pt-14'>
       <h1>Terms of Service</h1>
       <p>Last updated: June 18, 2024</p>
 

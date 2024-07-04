@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function PrivacyPolicy() {
   return (
-    <div className='p-14'>
+    <div className='p-14 pt-24'>
       <h1>Privacy Policy for Colony App</h1>
       <p>Last updated: June 18, 2024</p>
 

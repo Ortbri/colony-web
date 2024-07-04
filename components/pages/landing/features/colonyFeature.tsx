@@ -7,7 +7,7 @@ import { FaMapMarkedAlt } from 'react-icons/fa'
 
 function ColonyFeature() {
   return (
-    <div className='mb-10 mt-14 flex flex-col items-center'>
+    <div className='my-14 flex flex-col items-center'>
       <dl className='flex w-full flex-col items-center justify-between gap-14 px-4 md:flex-row'>
         {/* item 1 */}
         <div className='flex w-full flex-col items-center text-center md:w-1/3'>
