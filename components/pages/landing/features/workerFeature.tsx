@@ -81,7 +81,7 @@ const WorkerGridData = [
       description: 'Get Notified when jobs are near you',
       content: <JobsSkelly />
     },
-    className: 'col-span-4 md:col-span-6'
+    className: 'col-span-6 md:col-span-6'
   },
   {
     id: 2,

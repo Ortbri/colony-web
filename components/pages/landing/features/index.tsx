@@ -8,9 +8,10 @@ import { Button } from '../../../ui/button'
 function Features() {
   /* ---------------------------------- view ---------------------------------- */
   const [view, setView] = React.useState('hirer')
+
   /* --------------------------------- return --------------------------------- */
   return (
-    <section className='py-14'>
+    <section className='pt-14'>
       {/* header */}
       <div className='flex flex-col items-center justify-center gap-4 py-8'>
         <h2 className='mx-4 text-center text-6xl font-bold md:mx-14'>
@@ -24,6 +25,8 @@ function Features() {
             size={'lg'}
             onClick={() => setView('hirer')}
             variant={view === 'hirer' ? undefined : 'outline'}
+            aria-pressed={view === 'hirer'}
+            aria-label='View Hirer Features'
           >
             Hirer
           </Button>
@@ -31,6 +34,8 @@ function Features() {
             size={'lg'}
             onClick={() => setView('worker')}
             variant={view === 'worker' ? undefined : 'outline'}
+            aria-pressed={view === 'worker'}
+            aria-label='View Worker Features'
           >
             Worker
           </Button>

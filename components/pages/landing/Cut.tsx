@@ -1,12 +1,13 @@
 'use client'
 
 import React from 'react'
+import Head from 'next/head'
 import Link from 'next/link'
 import useInView from '@/hooks/useInView'
 import { motion } from 'framer-motion'
 import { MovingCards } from '@/components/framer/MovingCards'
-import { FaArrowDown } from 'react-icons/fa6'
 import {
+  FaArrowDown,
   FaDog,
   FaBroom,
   FaUtensils,
@@ -20,7 +21,7 @@ function Cut() {
   const [isInView, sectionRef] = useInView(0.1) // Adjust threshold to 0.1
   /* --------------------------------- return --------------------------------- */
   return (
-    <section ref={sectionRef} className='pb-40 pt-52'>
+    <section ref={sectionRef} className='my-24 py-52'>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: [20, -5, 0] } : {}}
@@ -30,7 +31,8 @@ function Cut() {
         <div className='flex flex-1 items-center justify-center'>
           <Link
             href='https://www.bls.gov/charts/american-time-use/activity-by-hldh.htm'
-            className='text-center text-3xl font-thin italic'
+            className='text-center text-xl font-thin italic'
+            title='American Time Use Survey Summary'
           >
             American Time Use Survey Summary
           </Link>
@@ -51,7 +53,12 @@ function Cut() {
             Reducing time for family, personal projects, relaxing
           </p>
         </div>
-        <FaArrowDown color='white' size={40} className='m-8 self-center' />
+        <FaArrowDown
+          color='white'
+          size={40}
+          className='m-8 self-center'
+          title='Scroll Down'
+        />
       </motion.div>
     </section>
   )
@@ -62,45 +69,45 @@ const tasks = [
     title: 'Dog Walking',
     description: 'An average of 1 hour per week is spent on dog walking.',
     time: '1 hour',
-    icon: <FaDog size={24} color='black' />
+    icon: <FaDog size={24} color='black' title='Dog Walking' />
   },
   {
     title: 'Lawn Mowing',
     description: 'An average of 1.5 hours per week is spent on lawn mowing.',
     time: '1.5 hours',
-    icon: <GiHighGrass size={24} color='black' />
+    icon: <GiHighGrass size={24} color='black' title='Lawn Mowing' />
   },
   {
     title: 'Cleaning',
     description: 'An average of 2.5 hours per week is spent on cleaning.',
     time: '2.5 hours',
-    icon: <FaBroom size={24} color='black' />
+    icon: <FaBroom size={24} color='black' title='Cleaning' />
   },
   {
     title: 'Cooking',
     description: 'An average of 5.5 hours per week is spent on cooking.',
     time: '5.5 hours',
-    icon: <FaUtensils size={24} color='black' />
+    icon: <FaUtensils size={24} color='black' title='Cooking' />
   },
   {
     title: 'Grocery Shopping',
     description:
       'An average of 1.2 hours per week is spent on grocery shopping.',
     time: '1.2 hours',
-    icon: <FaShoppingCart size={24} color='black' />
+    icon: <FaShoppingCart size={24} color='black' title='Grocery Shopping' />
   },
   {
     title: 'Laundry',
     description: 'An average of 1.5 hours per week is spent on laundry.',
     time: '1.5 hours',
-    icon: <FaRegClock size={24} color='black' />
+    icon: <FaRegClock size={24} color='black' title='Laundry' />
   },
   {
     title: 'Other',
     description:
       'An average of 2.8 hours per week is spent on other household tasks.',
     time: '2.8 hours',
-    icon: <FaDog size={24} color='black' />
+    icon: <FaDog size={24} color='black' title='Other Tasks' />
   }
 ]
 

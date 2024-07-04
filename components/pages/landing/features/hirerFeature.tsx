@@ -80,7 +80,7 @@ const HirerGridData = [
       titlePosition: 'top' as 'top', // Ensure correct typing
       content: <PostJobSkelly />
     },
-    className: 'col-span-4 md:col-span-6'
+    className: 'col-span-6 md:col-span-6'
   },
   {
     id: 2,

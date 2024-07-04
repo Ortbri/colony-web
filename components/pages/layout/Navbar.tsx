@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useState } from 'react'
 import {
   motion,
@@ -7,8 +8,8 @@ import {
   useMotionValueEvent
 } from 'framer-motion'
 import Link from 'next/link'
-import { cn } from '@/lib/utils'
 import Image from 'next/image'
+import { cn } from '@/lib/utils'
 import { Button } from '../../ui/button'
 import { NavDrawer } from '@/components/drawer/NavDrawer'
 
@@ -72,12 +73,14 @@ export const Navbar = ({
           }}
         >
           <div className='flex items-center'>
-            <Image
-              src={'/ColonyLogoWhite.png'}
-              width={50}
-              height={50}
-              alt='Colony Logo'
-            />
+            <Link href={'/'}>
+              <Image
+                src={'/ColonyLogoWhite.png'}
+                width={50}
+                height={50}
+                alt='Colony Logo'
+              />
+            </Link>
           </div>
           <ul className='hidden items-center space-x-4 lg:flex'>
             {navItems.map((navItem, idx) => (

@@ -22,7 +22,7 @@ export const CardGrid = ({
   return (
     <div
       className={cn(
-        'grid w-full auto-rows-[40rem] grid-cols-1 gap-4 md:grid-cols-6',
+        'mx-auto grid w-full auto-rows-[40rem] grid-cols-1 gap-4 md:grid-cols-6',
         className
       )}
     >
@@ -54,7 +54,7 @@ export const CardGridItem = ({
   return (
     <Card
       className={cn(
-        'flex h-full flex-col border-amber-950 bg-black',
+        'flex h-full flex-col rounded-3xl border-amber-900 bg-black',
         className
       )}
       {...props}

@@ -6,7 +6,7 @@ import { Spotlight } from '../../framer/Spotlight'
 function Intro() {
   return (
     <section className='mx-auto flex flex-col pt-40'>
-      {/* spotlight effect*/}
+      {/* spotlight effect */}
       <div>
         <Spotlight
           className='-left-10 -top-14 h-screen w-[100vw] md:-left-32 md:-top-20'
@@ -18,7 +18,7 @@ function Intro() {
       {/* details */}
       <div className='flex flex-col-reverse items-center md:flex-row md:items-start'>
         <div className='flex w-full max-w-xl flex-col items-center gap-8 text-center md:items-start md:text-left'>
-          <h1 className='text-center text-4xl font-bold md:text-left lg:text-7xl'>
+          <h1 className='text-center text-4xl font-bold md:text-left md:text-6xl lg:text-7xl'>
             Free Your Time, Reclaim Your Weekends, One task at a time
           </h1>
           <p className='text-lg text-neutral-600 dark:text-neutral-400'>

@@ -6,18 +6,37 @@ import { FaInstagram, FaGithub, FaFacebookF, FaTiktok } from 'react-icons/fa'
 const Footer = () => {
   return (
     <footer className='flex flex-col items-center gap-8 border-t-2 px-5 py-14'>
-      <div className='flex w-full max-w-7xl flex-col items-center justify-center gap-10 md:flex-row'>
-        {/* image here */}
-        <div className='flex items-center'>
-          <Link href={'/'}>
-            <Image
-              src={'/ColonyLogoWhite.png'}
-              width={50}
-              height={50}
-              alt='Colony Logo'
-            />
-          </Link>
+      {/* image here */}
+      <div className='flex items-center'>
+        <Link href={'/'}>
+          <Image
+            src={'/ColonyLogoWhite.png'}
+            width={100}
+            height={100}
+            alt='Colony Logo'
+          />
+        </Link>
+      </div>
+      <div className='flex flex-col gap-6'>
+        <div>
+          <Image
+            src='/GooglePlayBadge.png'
+            alt='Get it on Google Playstore'
+            width={120}
+            height={90}
+          />
         </div>
+        <div>
+          <Image
+            src='/AppStoreBadge.svg'
+            alt='Get it on App Store'
+            width={120}
+            height={90}
+          />
+        </div>
+      </div>
+
+      <div className='flex w-full max-w-7xl flex-col items-center justify-center gap-10 md:flex-row'>
         {/* links */}
 
         <ul className='flex flex-col items-center gap-10 pb-8 text-white md:flex-row md:pb-0'>
