@@ -10,7 +10,7 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import { Button } from '../../ui/button'
-import { DrawerDemo } from '@/components/drawer/NavDrawer'
+import { NavDrawer } from '@/components/drawer/NavDrawer'
 
 export const Navbar = ({
   navItems,
@@ -101,7 +101,7 @@ export const Navbar = ({
           </div>
           {/* drawer */}
           <div className='lg:hidden'>
-            <DrawerDemo navItems={navItems} />
+            <NavDrawer navItems={navItems} />
           </div>
         </motion.div>
       </AnimatePresence>

@@ -24,7 +24,6 @@ import * as React from 'react'
 import { useForm } from 'react-hook-form'
 import type { z } from 'zod'
 import { loginSchema } from './login.schema'
-import { error } from 'console'
 
 export const LoginForm = (): React.ReactElement => {
   /* ---------------------------------- state --------------------------------- */
