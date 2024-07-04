@@ -1,13 +1,7 @@
 import * as React from 'react'
 import { IoMdMenu } from 'react-icons/io'
 import { Button } from '@/components/ui/button'
-import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger
-} from '@/components/ui/drawer'
+import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 import Link from 'next/link'
 
 interface DrawerProps {

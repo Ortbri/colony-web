@@ -1,8 +1,9 @@
 'use client'
+
 import React from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import useInView from '@/hooks/useInView'
+import { motion } from 'framer-motion'
 import { MovingCards } from '@/components/framer/MovingCards'
 import { FaArrowDown } from 'react-icons/fa6'
 import {
