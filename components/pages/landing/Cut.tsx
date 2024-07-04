@@ -1,8 +1,9 @@
 'use client'
+
 import React from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import useInView from '@/hooks/useInView'
+import { motion } from 'framer-motion'
 import { MovingCards } from '@/components/framer/MovingCards'
 import { FaArrowDown } from 'react-icons/fa6'
 import {
@@ -19,7 +20,7 @@ function Cut() {
   const [isInView, sectionRef] = useInView(0.1) // Adjust threshold to 0.1
   /* --------------------------------- return --------------------------------- */
   return (
-    <section ref={sectionRef} className='pt-52'>
+    <section ref={sectionRef} className='pb-40 pt-52'>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: [20, -5, 0] } : {}}
