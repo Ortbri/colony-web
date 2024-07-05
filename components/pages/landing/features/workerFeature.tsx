@@ -24,7 +24,7 @@ const JobsSkelly = () => (
   <div className='flex h-full w-full overflow-hidden rounded-lg'>
     <div className='relative h-full w-full'>
       <Image
-        src='/JobDetails.png'
+        src='/JobPost.png'
         alt='Screen showing the details of a job'
         fill
         style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
