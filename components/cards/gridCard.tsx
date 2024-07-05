@@ -66,7 +66,7 @@ export const CardGridItem = ({
       </CardHeader>
 
       {/* vertical content */}
-      <CardContent className='flex min-h-[200px] flex-grow items-center justify-center overflow-hidden p-0 sm:min-h-[300px]'>
+      <CardContent className='flex h-[20rem] flex-grow items-center justify-center overflow-hidden p-0 sm:h-[25rem] md:h-[30rem] lg:h-[35rem] xl:h-[40rem]'>
         {item.content}
       </CardContent>
     </Card>

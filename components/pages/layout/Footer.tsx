@@ -38,7 +38,6 @@ const Footer = () => {
 
       <div className='flex w-full max-w-7xl flex-col items-center justify-center gap-10 md:flex-row'>
         {/* links */}
-
         <ul className='flex flex-col items-center gap-10 pb-8 text-white md:flex-row md:pb-0'>
           <li>
             <Link href='/info/about' className='hover:text-gray-300'>
@@ -72,22 +71,22 @@ const Footer = () => {
         <ul className='flex items-center gap-5 text-white md:flex-row'>
           <li>
             <Link href='/' className='hover:text-gray-300'>
-              <FaFacebookF size={18} />
+              <FaFacebookF size={20} />
             </Link>
           </li>
           <li>
             <Link href='/' className='hover:text-gray-300'>
-              <FaInstagram size={18} />
+              <FaInstagram size={20} />
             </Link>
           </li>
           <li>
             <Link href='/' className='hover:text-gray-300'>
-              <FaTiktok size={18} />
+              <FaTiktok size={20} />
             </Link>
           </li>
           <li>
             <Link href='/' className='hover:text-gray-300'>
-              <FaGithub size={18} />
+              <FaGithub size={20} />
             </Link>
           </li>
         </ul>
