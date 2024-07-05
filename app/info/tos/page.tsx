@@ -46,9 +46,9 @@ export default function TermsOfService() {
 
       <h2>No Warranties</h2>
       <p>
-        This app is provided "as is," with all faults, and Colony LLC express no
-        representations or warranties, of any kind related to this app or the
-        materials contained on this app.
+        This app is provided &quot;as is,&quot; with all faults, and Colony LLC
+        makes no representations or warranties of any kind related to this app
+        or the materials contained on this app.
       </p>
 
       <h2>Limitation of Liability</h2>
