@@ -1,8 +1,8 @@
 import React from 'react'
 import Cta from '@/components/pages/landing/Cta'
-import Cut from '@/components/pages/landing/Cut'
-import Intro from '@/components/pages/landing/Intro'
+import Cut from '@/components/pages/landing/cut'
 import Features from '@/components/pages/landing/features'
+import Intro from '@/components/pages/landing/Intro'
 import ColonyFeature from '@/components/pages/landing/features/colonyFeature'
 
 export default function Home() {
