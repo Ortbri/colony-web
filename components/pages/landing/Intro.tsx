@@ -32,7 +32,7 @@ function Intro() {
         <div className='flex flex-1 items-center justify-center lg:items-end lg:justify-end'>
           <Image
             src='/ColonyHome.png'
-            className='lg:-mr-14 lg:mt-0'
+            className='lg:-mr-14 lg:-mt-10'
             width={400}
             height={400}
             alt='Colony App Home Page'

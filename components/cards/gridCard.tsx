@@ -54,7 +54,7 @@ export const CardGridItem = ({
   return (
     <Card
       className={cn(
-        'flex h-full flex-col rounded-3xl border-amber-900 bg-black',
+        'flex h-full flex-col rounded-3xl border-2 bg-black',
         className
       )}
       {...props}

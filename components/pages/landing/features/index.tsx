@@ -8,7 +8,6 @@ import { Button } from '../../../ui/button'
 function Features() {
   /* ---------------------------------- view ---------------------------------- */
   const [view, setView] = React.useState('hirer')
-
   /* --------------------------------- return --------------------------------- */
   return (
     <section className='pt-14'>
