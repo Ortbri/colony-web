@@ -22,8 +22,9 @@ function Intro() {
             Free Your Time, Reclaim Your Weekends, One task at a time
           </h1>
           <p className='text-lg text-neutral-600 dark:text-neutral-400'>
-            Connect with local help for all your tasks and enjoy more free time.
-            Small business help, dog walking, yard work, and more coming soon!
+            Connect with local help for all your tasks and enjoy more free time
+            specifically built for small towns. Small business help, dog
+            walking, yard work, and more coming soon!
           </p>
           <div className='flex gap-3'>
             <Button>Coming Soon</Button>
