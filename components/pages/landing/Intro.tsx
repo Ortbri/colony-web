@@ -26,7 +26,7 @@ function Intro() {
             Small business help, dog walking, yard work, and more coming soon!
           </p>
           <div className='flex gap-3'>
-            <Button>Download now</Button>
+            <Button>Coming Soon</Button>
           </div>
         </div>
         <div className='flex flex-1 items-center justify-center lg:items-end lg:justify-end'>
