@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { FaInstagram, FaGithub, FaFacebookF, FaTiktok } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -9,6 +9,7 @@ const Footer = () => {
       {/* image here */}
       <div className='flex items-center'>
         <Link href={'/'}>
+          {/*  theme based logo just change them manually */}
           <Image
             src={'/ColonyLogoWhite.png'}
             width={100}
@@ -18,28 +19,28 @@ const Footer = () => {
         </Link>
       </div>
       <div className='flex flex-col gap-6'>
-        <div>
+        {/* <div>
           <Image
             src='/GooglePlayBadge.png'
             alt='Get it on Google Playstore'
             width={120}
             height={90}
           />
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           <Image
             src='/AppStoreBadge.svg'
             alt='Get it on App Store'
             width={120}
             height={90}
           />
-        </div>
+        </div> */}
       </div>
 
       <div className='flex w-full max-w-7xl flex-col items-center justify-center gap-10 md:flex-row'>
         {/* links */}
         <ul className='flex flex-col items-center gap-10 pb-8 text-white md:flex-row md:pb-0'>
-          <li>
+          {/* <li>
             <Link href='/info/about' className='hover:text-gray-300'>
               About
             </Link>
@@ -53,7 +54,7 @@ const Footer = () => {
             <Link href='/login' className='hover:text-gray-300'>
               Admin
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href='/info/tos' className='hover:text-gray-300'>
               Terms of Service
@@ -69,7 +70,7 @@ const Footer = () => {
       {/* socials */}
       <div>
         <ul className='flex items-center gap-5 text-white md:flex-row'>
-          <li>
+          {/* <li>
             <Link href='/' className='hover:text-gray-300'>
               <FaFacebookF size={20} />
             </Link>
@@ -83,7 +84,7 @@ const Footer = () => {
             <Link href='/' className='hover:text-gray-300'>
               <FaTiktok size={20} />
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href='/' className='hover:text-gray-300'>
               <FaGithub size={20} />

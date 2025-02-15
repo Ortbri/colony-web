@@ -1,13 +1,23 @@
 import type { Metadata } from 'next'
-import { ThemeProvider } from './provider'
+import { ThemeProvider } from '@/Providers/ThemeProvder'
 import { Navbar } from '@/components/pages/layout/Navbar'
-import { NAV_LINKS } from '@/data'
 import Footer from '@/components/pages/layout/Footer'
+import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin']
+})
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: 'Join Colony App',
-  description: 'Community based gig app'
+  description: 'Town Centric Gig Marketplace'
 }
 
 export default function RootLayout({
@@ -16,16 +26,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
-      <body>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='dark'
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar navItems={NAV_LINKS} />
-          <main className='relative overflow-hidden'>{children}</main>
+    <html lang='en' suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <ThemeProvider>
+          <Navbar />
+          {children}
           <Footer />
         </ThemeProvider>
       </body>

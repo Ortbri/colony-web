@@ -8,7 +8,7 @@ interface CleanSkellyProps {
   className?: string
 }
 
-const AnimatedDiv: React.FC<CleanSkellyProps> = ({
+const RadientColoredContainer: React.FC<CleanSkellyProps> = ({
   children,
   className = ''
 }) => {
@@ -43,4 +43,4 @@ const AnimatedDiv: React.FC<CleanSkellyProps> = ({
   )
 }
 
-export default AnimatedDiv
+export default RadientColoredContainer

@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-import AnimatedDiv from '@/components/framer/AnimatedDiv'
+import RadientColoredContainer from '@/components/framer/RadientColoredContainer'
 
 const Cta = () => {
   return (
     <section className='py-6'>
-      <AnimatedDiv className='flex flex-col items-center gap-8 py-14'>
+      <RadientColoredContainer className='flex flex-col items-center gap-8 py-14'>
         <div className='flex flex-col items-center gap-6 text-center'>
           <h2 className='text-5xl font-bold lg:text-5xl xl:max-w-[320px]'>
             Coming Soon!
@@ -33,7 +33,7 @@ const Cta = () => {
             />
           </div>
         </div>
-      </AnimatedDiv>
+      </RadientColoredContainer>
     </section>
   )
 }
