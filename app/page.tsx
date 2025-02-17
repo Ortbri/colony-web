@@ -1,20 +1,56 @@
+import { Button } from '@/components/ui/button'
+import { AppleIcon } from 'lucide-react'
 import React from 'react'
-import Cta from '@/components/pages/landing/Cta'
-import Cut from '@/components/pages/landing/cut'
-import Features from '@/components/pages/landing/features'
-import Intro from '@/components/pages/landing/Intro'
-import ColonyFeature from '@/components/pages/landing/features/colonyFeature'
 
 export default function Home() {
   return (
-    <main className='flex flex-col items-center px-5 sm:px-14'>
-      <div className='w-full max-w-7xl'>
-        <Intro />
-        <Cut />
-        <Features />
-        <Cta />
-        <ColonyFeature />
-      </div>
-    </main>
+    <div className=''>
+      <CTA />
+      <About />
+      <QuickFeature />
+      <Description />
+      <Features />
+      <ThePlan />
+    </div>
   )
+}
+
+function CTA() {
+  return (
+    <div className='flex flex-col items-center gap-4 py-36'>
+      <h1 className='text-4xl font-bold'>Community Based Gig App.</h1>
+      <p className='text-lg'>Expore this and this...</p>
+      <div>
+        <Button className='gap-2 rounded-3xl'>
+          {/* <AppleLog /> */}
+          <img
+            src='/apple.svg'
+            className='content-fit invert'
+            height={18}
+            width={18}
+          />
+          Download on iOS
+        </Button>
+      </div>
+    </div>
+  )
+}
+
+function About() {
+  return <div>...</div>
+}
+
+function QuickFeature() {
+  return <div>...</div>
+}
+
+function Description() {
+  return <div>...</div>
+}
+function Features() {
+  return <div>...</div>
+}
+
+function ThePlan() {
+  return <div>...</div>
 }
