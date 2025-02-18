@@ -1,0 +1,41 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+node_modules
+bun.lockb
+
+# Testing
+/coverage
+
+# Build outputs
+/.next/
+.next
+/out/
+/build
+/dist
+
+# Debug logs
+bun-debug.log*
+
+# Environment and local files
+.env*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# System files
+.DS_Store
+*.pem
+Thumbs.db
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Misc
+CHANGELOG.md
+.vercel
+ico

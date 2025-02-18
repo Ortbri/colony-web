@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss'
-import { fontFamily } from 'tailwindcss/defaultTheme'
 
 const config: Config = {
   content: [
@@ -9,6 +8,13 @@ const config: Config = {
   ],
   darkMode: ['class'],
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px'
+      }
+    },
     extend: {
       colors: {
         background: 'hsl(var(--background))',
@@ -88,14 +94,10 @@ const config: Config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         spotlight: 'spotlight 2s ease .75s 1 forwards'
-      },
-      fontFamily: {
-        sans: ['var(--font-quicksand)', ...fontFamily.sans],
-        heading: ['var(--font-outfit)', ...fontFamily.sans]
       }
     }
   },
   plugins: [require('tailwindcss-animate')]
-} satisfies Config
+}
 
 export default config
