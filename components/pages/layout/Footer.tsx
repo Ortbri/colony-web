@@ -1,18 +1,20 @@
 import React from 'react'
 
 import Link from 'next/link'
+import { ThemeToggle } from '@/components/theme-toggle'
 
 export default function Footer() {
   // const currentYear = new Date().getFullYear()
 
   return (
-    <footer className='mx-auto flex w-full flex-col items-center gap-4 px-14 pb-5 pt-24'>
+    <footer className='mx-auto flex w-full flex-col items-center gap-4 px-14 pb-5 pt-10'>
       <div className='flex flex-row gap-6'>
+        {/* <ThemeToggle /> */}
         <Link
           className='group relative text-muted-foreground transition-colors hover:text-foreground'
           href={'/'}
         >
-          <span className='relative text-xs after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-foreground after:transition-all after:duration-300 group-hover:after:w-full'>
+          <span className='relative text-xs font-thin after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-foreground after:transition-all after:duration-300 group-hover:after:w-full'>
             Privacy Policy
           </span>
         </Link>
@@ -20,7 +22,7 @@ export default function Footer() {
           className='group relative text-muted-foreground transition-colors hover:text-foreground'
           href={'/'}
         >
-          <span className='relative text-xs after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-foreground after:transition-all after:duration-300 group-hover:after:w-full'>
+          <span className='relative text-xs font-thin after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-foreground after:transition-all after:duration-300 group-hover:after:w-full'>
             Terms of use
           </span>
         </Link>
