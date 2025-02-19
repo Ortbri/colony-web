@@ -35,7 +35,8 @@ function CTA() {
         </p>
 
         <Button className='gap-2 rounded-3xl'>
-          <img
+          <Image
+            alt='apple logo'
             src='/apple.svg'
             className='content-fit invert'
             height={18}
@@ -194,10 +195,11 @@ function BottomCTA() {
       <h2 className='text-3xl font-bold'>Ready to get started?</h2>
       <p className='max-w-xl text-center text-muted-foreground'>
         Download the app and start saving time today. If your town is not yet
-        available, suggest the town and we'll reach out to you!
+        available, suggest the town and we&apos;ll reach out to you!
       </p>
       <Button className='gap-1 rounded-3xl'>
-        <img
+        <Image
+          alt='apple logo'
           src='/apple.svg'
           className='content-fit invert'
           height={18}
