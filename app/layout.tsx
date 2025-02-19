@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ThemeProvider } from '@/providers/ThemeProvder'
+import { ThemeProvider } from '@/context/ThemeProvder'
 import { Navbar } from '@/components/pages/layout/Navbar'
 import './globals.css'
 import Footer from '@/components/pages/layout/Footer'
