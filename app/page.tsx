@@ -1,7 +1,6 @@
 import { BentoFeatures } from '@/components/pages/landing/bento-features'
 import { Button } from '@/components/ui/button'
 import { ColonyReason } from '@/components/pages/landing/colony-reason'
-import { MapGoal } from '@/components/pages/landing/map-goal'
 import VideoCarousel from '@/components/pages/landing/video-carousel'
 import Image from 'next/image'
 import React from 'react'
@@ -15,7 +14,7 @@ export default function Home() {
       <QuickFeature />
       <WorkerQuickFeature />
       <WhyColony />
-      {/* <CantWithoutPeople /> */}
+      <CantWithoutPeople />
       {/* <OurGoal /> */}
       <BottomCTA />
     </div>
@@ -24,7 +23,7 @@ export default function Home() {
 
 function CTA() {
   return (
-    <section className='mx-auto flex w-full flex-col items-center justify-center gap-4 bg-yellow-50/20 py-36'>
+    <section className='mx-auto flex w-full flex-col items-center justify-center gap-6 py-36'>
       <div className='flex max-w-3xl flex-col items-center gap-4'>
         <h1 className='text-center text-6xl font-bold'>
           Find Local Help for Everyday Tasks
@@ -163,8 +162,11 @@ function CantWithoutPeople() {
    * 8.
    */
   return (
-    <section className='mx-auto flex w-full max-w-7xl flex-col gap-8 bg-gray-50/60 px-14 py-10 xl:rounded-3xl'>
-      <h3 className='text-4xl font-thin'>We cant do this alone</h3>
+    <section className='mx-auto flex w-full max-w-7xl flex-col gap-8 px-14 py-80'>
+      <div className='flex flex-col gap-2'>
+        <h2 className='text-4xl font-bold'>What can go wrong?</h2>
+        <p className='text-xl'>the reality is, just about everything</p>
+      </div>
       {/* 2 stack left item and right item  */}
       <div className='flex'>
         <div className='grid w-full grid-cols-2 gap-4'>
@@ -181,18 +183,10 @@ function CantWithoutPeople() {
   )
 }
 
-function OurGoal() {
-  return (
-    <div className=''>
-      <MapGoal />
-    </div>
-  )
-}
-
 function BottomCTA() {
   return (
-    <section className='mx-auto flex w-full flex-col items-center justify-center gap-4 bg-yellow-50 px-14 py-14'>
-      <h2 className='text-3xl font-bold'>Ready to get started?</h2>
+    <section className='mx-auto flex w-full flex-col items-center justify-center gap-4 bg-yellow-50/40 px-14 py-14'>
+      <h2 className='text-3xl font-bold'>Try Colony</h2>
       <p className='max-w-xl text-center text-muted-foreground'>
         Download the app and start saving time today. If your town is not yet
         available, suggest the town and we&apos;ll reach out to you!

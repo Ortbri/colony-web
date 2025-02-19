@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useRef } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import {
@@ -7,8 +7,6 @@ import {
   DollarSign,
   Calendar,
   MapPin,
-  Bell,
-  PlusCircle,
   Plus,
   CircleDotDashed
 } from 'lucide-react'
@@ -29,7 +27,7 @@ const notifications: Notification[] = [
     icon: <IconContainer icon={<Plus className='h-4 w-4' />} />,
     title: 'Job Created',
     message: 'Your job post for Yard Work is live! 🎉',
-    className: '-translate-x-[270px] -translate-y-[150px]'
+    className: '-translate-x-[245px] -translate-y-[150px] opacity-40'
   },
   {
     id: 2,
@@ -55,23 +53,22 @@ const notifications: Notification[] = [
     icon: <IconContainer icon={<CircleDotDashed className='h-4 w-4' />} />,
     title: 'Job Completed!',
     message: 'Review the work to release the funds 🔍',
-    className: '-translate-x-[320px] translate-y-[10px]'
+    className: '-translate-x-[320px] translate-y-[10px] opacity-40'
   },
   {
     id: 4,
     icon: <IconContainer icon={<DollarSign className='h-4 w-4' />} />,
     title: 'Funds Released',
     message: "You've successfully paid Brian 💰 $17.50",
-    className: '-translate-x-[300px] translate-y-[90px]'
+    className: '-translate-x-[265px] translate-y-[90px] '
   },
-
   // Right side (5-8)
   {
     id: 5,
     icon: <IconContainer icon={<MapPin className='h-4 w-4' />} />,
     title: 'New Job Nearby 📍',
     message: 'A new Yard Work job was posted near you',
-    className: 'translate-x-[300px] -translate-y-[150px]'
+    className: 'translate-x-[305px] -translate-y-[150px] '
   },
   {
     id: 6,
@@ -90,21 +87,21 @@ const notifications: Notification[] = [
     ),
     title: 'Request Accepted',
     message: 'John accepted your request to do Yard Work ✅',
-    className: 'translate-x-[310px] -translate-y-[70px]'
+    className: 'translate-x-[310px] -translate-y-[70px] opacity-40'
   },
   {
     id: 7,
     icon: <IconContainer icon={<Calendar className='h-4 w-4' />} />,
     title: 'Job Starts Today',
     message: 'Reminder: Your Yard Work job starts today ⏰',
-    className: 'translate-x-[320px] translate-y-[10px]'
+    className: 'translate-x-[320px] translate-y-[10px] opacity-40'
   },
   {
     id: 8,
     icon: <IconContainer icon={<CheckCircle2 className='h-4 w-4' />} />,
     title: 'Payout!',
     message: 'Funds were released to your account 💰',
-    className: 'translate-x-[300px] translate-y-[90px]'
+    className: 'translate-x-[300px] translate-y-[90px] opacity-40'
   }
 ]
 
@@ -125,19 +122,20 @@ function IconContainer({
 }
 
 function NotificationCard({ notification }: { notification: Notification }) {
-  // Generate a random delay between 0 and 2 seconds
-  const randomDelay = Math.random() * 1
+  // Generate random delay once on mount (0-0.3s)
+  const delay = useRef(Math.random() * 0.3).current
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0 }}
+      initial={{ opacity: 0, scale: 0.6 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
-        duration: 0.4,
-        delay: randomDelay,
-        ease: 'easeOut'
+        duration: 0.8,
+        delay: delay,
+        scale: { type: 'tween', damping: 24, stiffness: 200 },
+        opacity: { duration: 0.3, delay: delay }
       }}
-      className='w-[360px] rounded-3xl bg-white px-2 py-3 shadow-md'
+      className='w-[360px] rounded-2xl bg-white px-2 py-3 shadow-md'
     >
       <div className='flex items-center gap-3'>
         {notification.icon}
@@ -154,9 +152,6 @@ function BehindPhone() {
   return (
     <div className='pointer-events-none absolute inset-0'>
       <div className='relative flex h-full w-full items-center justify-center'>
-        {/* <div className={`absolute transform-gpu ${notifications[0].className}`}>
-          <NotificationCard notification={notifications[0]} />
-        </div> */}
         {notifications.map((notification) => (
           <div
             key={notification.id}
