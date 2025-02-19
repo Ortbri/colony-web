@@ -1,8 +1,8 @@
 'use client'
 
 import React from 'react'
-import HirerFeature from './hirerFeature'
-import WorkerFeature from './workerFeature'
+// import HirerFeature from './hirerFeature'
+// import WorkerFeature from './workerFeature'
 import { Button } from '../../../ui/button'
 
 function Features() {
@@ -41,7 +41,7 @@ function Features() {
         </div>
       </div>
       {/* grid */}
-      {view === 'hirer' ? <HirerFeature /> : <WorkerFeature />}
+      {/* {view === 'hirer' ? <HirerFeature /> : <WorkerFeature />} */}
     </section>
   )
 }
