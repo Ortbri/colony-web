@@ -47,7 +47,7 @@ export function USMap({ dots = [], dotColor = '#0ea5e9' }: MapProps) {
   }
 
   return (
-    <div className='relative aspect-[2/1] w-full rounded-lg bg-white font-sans dark:bg-black'>
+    <div className='relative h-full w-full rounded-lg bg-white font-sans dark:bg-black'>
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
         className='pointer-events-none h-full w-full select-none [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)]'
