@@ -8,6 +8,7 @@ export default function Footer() {
 
   return (
     <footer className='mx-auto flex w-full flex-col items-center gap-4 px-14 pb-5 pt-10'>
+      <ThemeToggle />
       <div className='flex flex-row gap-6'>
         {/* <ThemeToggle /> */}
         <Link

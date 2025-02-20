@@ -3,13 +3,7 @@ import { cn } from '@/lib/utils'
 import React from 'react'
 import { BentoGrid, BentoGridItem } from '@/components/framer/bento'
 
-import {
-  ClipboardCopy,
-  FileText,
-  PencilLine,
-  BarChart3,
-  FileEdit
-} from 'lucide-react'
+import { MapPin, Briefcase, Users, Clock, DollarSign } from 'lucide-react'
 
 import { motion } from 'framer-motion'
 
@@ -297,59 +291,63 @@ const SkeletonFive = () => {
 }
 const items = [
   {
-    title: 'AI Content Generation',
+    title: 'Built for Small Towns',
     description: (
       <span className='text-sm'>
-        Experience the power of AI in generating unique content.
+        Finally, a gig platform designed specifically for small and college
+        towns, where national apps fall short.
       </span>
     ),
     header: <SkeletonOne />,
     className: 'md:col-span-1',
-    icon: <ClipboardCopy className='h-4 w-4 text-neutral-500' />
+    icon: <MapPin className='h-4 w-4 text-neutral-500' />
   },
   {
-    title: 'Automated Proofreading',
+    title: 'Diverse Services',
     description: (
       <span className='text-sm'>
-        Let AI handle the proofreading of your documents.
+        From yard work to pet care and small business help - find the local
+        support you need.
       </span>
     ),
     header: <SkeletonTwo />,
     className: 'md:col-span-1',
-    icon: <FileText className='h-4 w-4 text-neutral-500' />
+    icon: <Briefcase className='h-4 w-4 text-neutral-500' />
   },
   {
-    title: 'Contextual Suggestions',
+    title: 'Community First',
     description: (
       <span className='text-sm'>
-        Get AI-powered suggestions based on your writing context.
+        Build trust and connections within your local community while getting
+        things done.
       </span>
     ),
     header: <SkeletonThree />,
     className: 'md:col-span-1',
-    icon: <PencilLine className='h-4 w-4 text-neutral-500' />
+    icon: <Users className='h-4 w-4 text-neutral-500' />
   },
   {
-    title: 'Sentiment Analysis',
+    title: 'Save Time & Money',
     description: (
       <span className='text-sm'>
-        Understand the sentiment of your text with AI analysis.
+        Reclaim your weekends and support your local economy with our
+        transparent 3% fee structure.
       </span>
     ),
     header: <SkeletonFour />,
     className: 'md:col-span-2',
-    icon: <BarChart3 className='h-4 w-4 text-neutral-500' />
+    icon: <Clock className='h-4 w-4 text-neutral-500' />
   },
-
   {
-    title: 'Text Summarization',
+    title: 'Flexible Earnings',
     description: (
       <span className='text-sm'>
-        Summarize your lengthy documents with AI technology.
+        Find consistent opportunities and earn extra income by helping your
+        community.
       </span>
     ),
     header: <SkeletonFive />,
     className: 'md:col-span-1',
-    icon: <FileEdit className='h-4 w-4 text-neutral-500' />
+    icon: <DollarSign className='h-4 w-4 text-neutral-500' />
   }
 ]
