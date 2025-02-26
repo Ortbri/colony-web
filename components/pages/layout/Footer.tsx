@@ -13,7 +13,7 @@ export default function Footer() {
         {/* <ThemeToggle /> */}
         <Link
           className='group relative text-muted-foreground transition-colors hover:text-foreground'
-          href={'/'}
+          href={'/legal/privacy'}
         >
           <span className='relative text-xs font-thin after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-foreground after:transition-all after:duration-300 group-hover:after:w-full'>
             Privacy Policy
@@ -21,7 +21,7 @@ export default function Footer() {
         </Link>
         <Link
           className='group relative text-muted-foreground transition-colors hover:text-foreground'
-          href={'/'}
+          href={'/legal/tos'}
         >
           <span className='relative text-xs font-thin after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-foreground after:transition-all after:duration-300 group-hover:after:w-full'>
             Terms of use
