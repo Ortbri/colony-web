@@ -24,6 +24,10 @@ export default function Home() {
 function CTA() {
   return (
     <section className='mx-auto flex w-full flex-col items-center justify-center gap-6 pt-24'>
+      {/* only for now */}
+      <div className='rounded-3xl bg-black px-4 py-2 font-bold text-white'>
+        Website in development
+      </div>
       <div className='flex max-w-xl flex-col items-center gap-4'>
         <h1 className='text-center text-5xl font-bold'>
           Find Local Help for Everyday Tasks
