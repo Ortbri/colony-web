@@ -26,7 +26,7 @@ function CTA() {
     <section className='mx-auto flex w-full flex-col items-center justify-center gap-6 pt-24'>
       {/* only for now */}
       <div className='rounded-3xl bg-foreground px-4 py-2 font-bold text-background '>
-        Website in development
+        Website in development 
       </div>
       <div className='flex max-w-xl flex-col items-center gap-4'>
         <h1 className='text-center text-5xl font-bold'>
