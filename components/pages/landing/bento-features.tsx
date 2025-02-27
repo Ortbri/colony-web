@@ -60,7 +60,7 @@ const SkeletonOne = () => {
         variants={variants}
         className='flex flex-row items-center space-x-2 rounded-full border border-neutral-100 bg-white p-2 dark:border-white/[0.2] dark:bg-black'
       >
-        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-pink-500 to-violet-500' />
+        <div className='h-6 w-6 shrink-0 rounded-full bg-linear-to-r from-pink-500 to-violet-500' />
         <div className='h-4 w-full rounded-full bg-gray-100 dark:bg-neutral-900' />
       </motion.div>
       <motion.div
@@ -68,13 +68,13 @@ const SkeletonOne = () => {
         className='ml-auto flex w-3/4 flex-row items-center space-x-2 rounded-full border border-neutral-100 bg-white p-2 dark:border-white/[0.2] dark:bg-black'
       >
         <div className='h-4 w-full rounded-full bg-gray-100 dark:bg-neutral-900' />
-        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-pink-500 to-violet-500' />
+        <div className='h-6 w-6 shrink-0 rounded-full bg-linear-to-r from-pink-500 to-violet-500' />
       </motion.div>
       <motion.div
         variants={variants}
         className='flex flex-row items-center space-x-2 rounded-full border border-neutral-100 bg-white p-2 dark:border-white/[0.2] dark:bg-black'
       >
-        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-pink-500 to-violet-500' />
+        <div className='h-6 w-6 shrink-0 rounded-full bg-linear-to-r from-pink-500 to-violet-500' />
         <div className='h-4 w-full rounded-full bg-gray-100 dark:bg-neutral-900' />
       </motion.div>
     </motion.div>
@@ -284,7 +284,7 @@ const SkeletonFive = () => {
         className='ml-auto flex w-3/4 flex-row items-center justify-end space-x-2 rounded-full border border-neutral-100 bg-white p-2 dark:border-white/[0.2] dark:bg-black'
       >
         <p className='text-xs text-neutral-500'>Use PHP.</p>
-        <div className='h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-r from-pink-500 to-violet-500' />
+        <div className='h-6 w-6 shrink-0 rounded-full bg-linear-to-r from-pink-500 to-violet-500' />
       </motion.div>
     </motion.div>
   )

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ThemeProvider } from '@/context/ThemeProvder'
+// import { ThemeProvider } from '@/context/ThemeProvder'
 import { Navbar } from '@/components/pages/layout/Navbar'
 import { Geist_Mono, Geist } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
@@ -31,12 +31,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <Analytics />
-        </ThemeProvider>
+        {/* <ThemeProvider> */}
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+        <Analytics />
+        {/* </ThemeProvider> */}
       </body>
     </html>
   )
