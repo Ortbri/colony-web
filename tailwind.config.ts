@@ -86,9 +86,20 @@ const config: Config = {
             opacity: '1',
             transform: 'translate(-50%,-40%) scale(1)'
           }
+        },
+        'fade-up': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(10px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'trasnlateY(0px)'
+          }
         }
       },
       animation: {
+        'fade-up': 'fade-up 0.5s ease-out',
         scroll:
           'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',

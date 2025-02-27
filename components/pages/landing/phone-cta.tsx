@@ -6,9 +6,9 @@ function PhoneCTA() {
   return (
     <div className='relative z-10 flex w-full justify-center'>
       {/* behind phone */}
-      <BehindPhone />
+      {/* <BehindPhone /> */}
       {/* phone */}
-      <div className='relative flex h-[600px] w-[300px] items-center justify-center'>
+      <div className='animate-fade-up relative flex h-[600px] w-[300px] items-center justify-center opacity-0 [animation-delay:800ms] [animation-fill-mode:forwards]'>
         <div className='absolute overflow-hidden rounded-[20px]'>
           <Image
             src='/colony-home.png'
