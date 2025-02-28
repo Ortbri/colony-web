@@ -7,7 +7,7 @@ export default function VideoCarousel() {
       {items.map((item, index) => (
         <div
           key={index}
-          className='group/bento relative flex flex-col gap-4 rounded-xl border border-border bg-white p-4 shadow-input transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none'
+          className='group/bento border-border shadow-input relative flex flex-col gap-4 rounded-xl border bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none'
           // viewport={{ once: true }}
         >
           <div className='flex-1 rounded-xl bg-gray-100/50'>

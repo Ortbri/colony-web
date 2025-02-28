@@ -66,7 +66,7 @@ export function JobCategoriesAnim() {
   const CARD_OFFSET = -16
   const SCALE_FACTOR = 0.06
   const [cards, setCards] = useState<NotificationType[]>(notifications)
-  const [_, setIntervalId] = useState<NodeJS.Timeout | null>(null)
+  const [, setIntervalId] = useState<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     const timerId = setInterval(() => {
