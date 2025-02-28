@@ -13,14 +13,29 @@ import {
   HoverCardTrigger
 } from '@/components/ui/hover-card'
 
+// Add metadata for SEO
+export const metadata = {
+  title: 'Colony - Local Help for Everyday Tasks in Small Towns | Nebraska',
+  description:
+    'Connect with trusted locals for yard work, dog walking, and small business help in Nebraska. Colony brings the gig economy to small towns with transparent fees and community focus.',
+  keywords:
+    'local help, gig economy, small towns, Nebraska, yard work, dog walking, small business help, trusted workers',
+  openGraph: {
+    title: 'Colony - Local Help for Everyday Tasks in Small Towns',
+    description:
+      'Find trusted local help for yard work, dog walking, and small business tasks in Nebraska communities.',
+    images: ['/colony-home.png']
+  }
+}
+
 export default function Home() {
   return (
-    <div className='flex flex-col gap-8'>
+    <main className='flex flex-col gap-8'>
       <CTA />
       <WhyColony />
       <HirerQuickFeature />
       <WorkerQuickFeature />
-    </div>
+    </main>
   )
 }
 /* -------------------------------------------------------------------------- */
@@ -31,11 +46,11 @@ function CTA() {
     <section className='mx-auto flex w-full flex-col items-center justify-center gap-6 px-4 pt-16 pb-10 sm:px-8 sm:pt-20 md:px-14'>
       <div className='flex max-w-xl flex-col items-center gap-4 px-2'>
         <h1 className='animate-fade-up text-center text-4xl font-bold opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards] sm:text-5xl'>
-          Find Local Help for Everyday Tasks
+          Find Local Help for Everyday Tasks in Nebraska
         </h1>
         <p className='animate-fade-up text-center text-base opacity-0 [animation-delay:400ms] [animation-fill-mode:forwards] sm:text-lg'>
           Connect with trusted locals for yard work, dog walking, small business
-          help. | Currently Available in Nebraska
+          help. | Currently Available in Nebraska Communities
         </p>
       </div>
       <PhoneCTA />
@@ -51,7 +66,7 @@ function CTA() {
           width={30}
           height={30}
           className='invert'
-          alt='Nebraska Innovation Fund'
+          alt='Nebraska Innovation Fund Logo'
         />
       </div>
     </section>
@@ -79,7 +94,7 @@ const ColonyReason = [
                 🌱
               </div>
               <div className='space-y-1'>
-                <h4 className='text-sm font-semibold'>Yard Work</h4>
+                <h4 className='text-sm font-semibold'>Yard Work Services</h4>
                 <ul className=''>
                   <li>Mowing Lawns</li>
                   <li>Fall Leaves</li>
@@ -102,21 +117,16 @@ const ColonyReason = [
                 🐝
               </div>
               <div className='space-y-1'>
-                <h4 className='text-sm font-semibold'>Small Business Help</h4>
+                <h4 className='text-sm font-semibold'>
+                  Small Business Support
+                </h4>
                 <ul className=''>
                   <li>Mom & Pop Shops</li>
                   <li>Warehouse Work</li>
-
                   <li>Packing</li>
                   <li>Warehouse Cleaning</li>
                   <li>Its your business!</li>
                 </ul>
-
-                {/* <div className='flex items-center pt-2'>
-                  <span className='text-xs text-muted-foreground'>
-                    Year-round opportunities
-                  </span>
-                </div> */}
               </div>
             </div>
           </HoverCardContent>
@@ -134,7 +144,7 @@ const ColonyReason = [
                 🐶
               </div>
               <div className='space-y-1'>
-                <h4 className='text-sm font-semibold'>Pet Services</h4>
+                <h4 className='text-sm font-semibold'>Pet Care Services</h4>
                 <ul className=''>
                   <li>Dog Walking</li>
                   <li>Pet Sitting</li>
@@ -239,7 +249,7 @@ const ColonyReason = [
       </div>
     ),
     content: <TransparentFeesAnim />,
-    philosophy: 'Fees allow us to opperate '
+    philosophy: 'Fees allow us to operate'
   },
   {
     title: 'Built for Small Towns',
@@ -286,14 +296,17 @@ const ColonyReason = [
 ]
 function WhyColony() {
   return (
-    <section className='mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-10 sm:px-8 md:px-14'>
+    <section
+      className='mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-10 sm:px-8 md:px-14'
+      aria-label='Why Choose Colony'
+    >
       <div className='w-full bg-white dark:bg-neutral-950'>
         <div className='mx-auto flex flex-col gap-10 lg:flex-row'>
           {/* floating */}
           <div className='top-40 flex h-fit w-full flex-col gap-6 md:w-full lg:sticky'>
-            <h3 className='text-2xl font-bold md:text-3xl'>
+            <h2 className='text-2xl font-bold md:text-3xl'>
               Why we&apos;re here
-            </h3>
+            </h2>
             <p className='text-xl'>
               The gig economy wasn&apos;t built for small towns. We&apos;re
               changing that.
@@ -328,7 +341,10 @@ function WhyColony() {
 /* -------------------------------------------------------------------------- */
 function HirerQuickFeature() {
   return (
-    <section className='mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 pt-4 pb-10 sm:px-8 md:px-14'>
+    <section
+      className='mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 pt-4 pb-10 sm:px-8 md:px-14'
+      aria-label='How to Hire Help'
+    >
       <h2 className='text-3xl font-medium md:text-4xl'>
         <span>Create a job,</span>
         <br />
@@ -345,7 +361,10 @@ function HirerQuickFeature() {
 /* -------------------------------------------------------------------------- */
 function WorkerQuickFeature() {
   return (
-    <section className='mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-10 sm:px-8 md:px-14'>
+    <section
+      className='mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-10 sm:px-8 md:px-14'
+      aria-label='How to Find Work'
+    >
       <h2 className='text-end text-3xl font-medium md:text-4xl'>
         <span>Select a job,</span>
         <br />
