@@ -32,9 +32,9 @@ export default function Home() {
   return (
     <main className='flex flex-col gap-8'>
       <CTA />
-      <WhyColony />
       <HirerQuickFeature />
       <WorkerQuickFeature />
+      <WhyColony />
     </main>
   )
 }
