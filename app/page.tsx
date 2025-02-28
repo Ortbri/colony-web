@@ -28,7 +28,7 @@ export default function Home() {
 /* -------------------------------------------------------------------------- */
 function CTA() {
   return (
-    <section className='mx-auto flex w-full flex-col items-center justify-center gap-6 px-4 pb-10 pt-16 sm:px-8 sm:pt-20 md:px-14'>
+    <section className='mx-auto flex w-full flex-col items-center justify-center gap-6 px-4 pt-16 pb-10 sm:px-8 sm:pt-20 md:px-14'>
       <div className='flex max-w-xl flex-col items-center gap-4 px-2'>
         <h1 className='animate-fade-up text-center text-4xl font-bold opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards] sm:text-5xl'>
           Find Local Help for Everyday Tasks
@@ -172,7 +172,7 @@ const ColonyReason = [
                   job, helping us maintain the platform.
                 </p>
                 <div className='flex items-center pt-2'>
-                  <span className='text-xs text-muted-foreground'>
+                  <span className='text-muted-foreground text-xs'>
                     Applied at job acceptance
                   </span>
                 </div>
@@ -199,7 +199,7 @@ const ColonyReason = [
                   sustainable operations.
                 </p>
                 <div className='flex items-center pt-2'>
-                  <span className='text-xs text-muted-foreground'>
+                  <span className='text-muted-foreground text-xs'>
                     Applied after successful completion
                   </span>
                 </div>
@@ -227,7 +227,7 @@ const ColonyReason = [
                   communities.
                 </p>
                 <div className='flex items-center pt-2'>
-                  <span className='text-xs text-muted-foreground'>
+                  <span className='text-muted-foreground text-xs'>
                     No hidden costs or surprise charges
                   </span>
                 </div>
@@ -244,7 +244,7 @@ const ColonyReason = [
   {
     title: 'Built for Small Towns',
     description: (
-      <div className='text-lg'>
+      <div className='text-md'>
         Big gig apps ignore small towns due to low demand. Colony is built for
         these{' '}
         <HoverCard>
@@ -265,10 +265,10 @@ const ColonyReason = [
                 <p className='text-sm'>
                   We prioritize smaller communities where neighbors can help
                   neighbors, creating meaningful relationships that strengthen
-                  small towns in ways big gig apps can't.
+                  small towns in ways big gig apps can&apos;t.
                 </p>
                 <div className='flex items-center pt-2'>
-                  <span className='text-xs text-muted-foreground'>
+                  <span className='text-muted-foreground text-xs'>
                     Building relationships, not just transactions
                   </span>
                 </div>
@@ -290,7 +290,7 @@ function WhyColony() {
       <div className='w-full bg-white dark:bg-neutral-950'>
         <div className='mx-auto flex flex-col gap-10 lg:flex-row'>
           {/* floating */}
-          <div className='top-20 flex h-fit w-full flex-col gap-6 md:w-full lg:sticky'>
+          <div className='top-40 flex h-fit w-full flex-col gap-6 md:w-full lg:sticky'>
             <h3 className='text-2xl font-bold md:text-3xl'>
               Why we&apos;re here
             </h3>
@@ -300,11 +300,11 @@ function WhyColony() {
             </p>
           </div>
           {/* content */}
-          <div className='flex w-full flex-col items-end gap-24'>
+          <div className='flex w-7/12 flex-col items-end gap-24'>
             {ColonyReason.map((item, index) => (
               <div
                 key={index}
-                className='flex w-full flex-col gap-2 rounded-2xl border border-border p-4'
+                className='border-border flex w-full flex-col gap-2 rounded-2xl border p-4'
               >
                 <div className='relative w-full rounded-xl bg-blue-50'>
                   {item.content}
@@ -328,7 +328,7 @@ function WhyColony() {
 /* -------------------------------------------------------------------------- */
 function HirerQuickFeature() {
   return (
-    <section className='mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 pb-10 pt-4 sm:px-8 md:px-14'>
+    <section className='mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 pt-4 pb-10 sm:px-8 md:px-14'>
       <h2 className='text-3xl font-medium md:text-4xl'>
         <span>Create a job,</span>
         <br />

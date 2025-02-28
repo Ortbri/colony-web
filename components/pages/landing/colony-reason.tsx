@@ -22,7 +22,7 @@ const notifications = [
       </p>
     ),
     description: (
-      <p className='font-medium text-muted-foreground'>
+      <p className='text-muted-foreground font-medium'>
         by Brian <span className='font-bold'>$13.25</span> •
         <span> Mar 14th @ 3pm (30 min)</span>
       </p>
@@ -91,7 +91,7 @@ export function JobCategoriesAnim() {
           return (
             <motion.div
               key={noti.id}
-              className='absolute left-0 right-0 top-6 flex w-full max-w-[500px] flex-row gap-2 rounded-3xl border border-neutral-200 bg-white p-3 shadow-xl shadow-black/[0.04] dark:border-white/[0.1] dark:bg-black dark:shadow-white/[0.05] sm:gap-3 sm:p-4'
+              className='absolute top-6 right-0 left-0 flex w-full max-w-[500px] flex-row gap-2 rounded-3xl border border-neutral-200 bg-white p-3 shadow-xl shadow-black/[0.04] sm:gap-3 sm:p-4 dark:border-white/[0.1] dark:bg-black dark:shadow-white/[0.05]'
               style={{
                 transformOrigin: 'center top'
               }}
@@ -106,7 +106,7 @@ export function JobCategoriesAnim() {
                 width={50}
                 height={50}
                 alt='person face'
-                className='h-[50px] w-[50px] shrink-0 rounded-full border border-border sm:h-[60px] sm:w-[60px]'
+                className='border-border h-[50px] w-[50px] shrink-0 rounded-full border sm:h-[60px] sm:w-[60px]'
               />
               <div className='flex w-full flex-col gap-1 overflow-hidden'>
                 <div className='text-sm sm:text-base'>{noti.title}</div>
@@ -135,7 +135,7 @@ export function TransparentFeesAnim() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className='flex w-[350px] flex-col gap-4 rounded-3xl border border-border bg-background p-5 shadow-lg'
+        className='border-border bg-background flex w-[350px] flex-col gap-4 rounded-3xl border p-5 shadow-lg'
       >
         <div className='flex flex-row gap-4'>
           <Image
@@ -143,7 +143,7 @@ export function TransparentFeesAnim() {
             width={50}
             height={50}
             alt='person face'
-            className='rounded-full border border-border'
+            className='border-border rounded-full border'
           />
           <div className='flex w-full flex-col justify-center'>
             <div className='text-lg font-bold'>Hirer Pays</div>
@@ -177,7 +177,7 @@ export function TransparentFeesAnim() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className='flex w-[350px] flex-col gap-4 rounded-3xl border border-border bg-background p-5 shadow-lg'
+        className='border-border bg-background flex w-[350px] flex-col gap-4 rounded-3xl border p-5 shadow-lg'
       >
         <div className='flex flex-row gap-4'>
           <Image
@@ -185,7 +185,7 @@ export function TransparentFeesAnim() {
             width={50}
             height={50}
             alt='person face'
-            className='rounded-full border border-border'
+            className='border-border rounded-full border'
           />
           <div className='flex w-full flex-col justify-center'>
             <div className='text-lg font-bold'>Worker Payout</div>
@@ -228,7 +228,7 @@ export function LocalComparisonAnim() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className='flex w-[350px] flex-col gap-4 rounded-3xl border border-red-200 bg-background p-5 shadow-lg'
+        className='bg-background flex h-[280px] w-[350px] flex-col gap-4 rounded-3xl border border-red-200 p-5 shadow-lg'
       >
         <div className='flex flex-row gap-4'>
           <div className='flex aspect-square h-12 w-12 items-center justify-center rounded-full bg-red-100'>
@@ -267,7 +267,7 @@ export function LocalComparisonAnim() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className='flex w-[350px] flex-col gap-4 rounded-3xl border border-blue-200 bg-background p-5 shadow-lg'
+        className='bg-background flex h-[280px] w-[350px] flex-col gap-4 rounded-3xl border border-blue-200 p-5 shadow-lg'
       >
         <div className='flex flex-row gap-4'>
           <div className='flex aspect-square h-12 w-12 items-center justify-center rounded-full bg-indigo-100'>
@@ -286,7 +286,9 @@ export function LocalComparisonAnim() {
           </li>
           <li className='flex items-center gap-2'>
             <span className='text-green-500'>✅</span>
-            <span className='text-gray-600'>Keeps money local</span>
+            <span className='text-gray-600'>
+              Keeps money in community and local work
+            </span>
           </li>
           <li className='flex items-center gap-2'>
             <span className='text-green-500'>✅</span>
